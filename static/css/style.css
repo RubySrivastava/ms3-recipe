@@ -1,3 +1,11 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+
+nav ul a {
+    color: brown;
+}
+footer a {
+    color: brown;
+}
+.page-content{
+      min-height: calc(100vh - 128px);
 }

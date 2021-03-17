@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css " type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css "
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
@@ -15,45 +18,62 @@
     {% endblock %}
     <title>Ruby's Kitchen</title>
 </head>
+
 <body>
 
     <header>
         <!-- top navbar -->
-		<nav class="nav-extended text-shadow teal lighten-1">
-			<div class="nav-wrapper">
-				<a href="{{ url_for('get_recipes') }}" class="brand-logo">Ruby's Kitchen</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down">
+        <nav class="nav-extended text-shadow orange lighten-5">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo brown-text text-darken-2">Ruby's Kitchen</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right brown-text text-darken-2"><i
+                        class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="#">My Page</a></li>
                     <li><a href="#">Categories</a></li>
-					<li><a href="{{ url_for('get_recipes') }}">Recipe</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}">Recipe</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
-					<li><a href="#">Sign Up</a></li>
-				</ul>
-			</div>
-		</nav>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- mobile sidenav -->
-		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align teal lighten-1">Ruby's Kitchen</h4></li>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h4 class="center-align orange lighten-5">Ruby's Kitchen</h4>
+            </li>
             <li><a href="#">My Page</a></li>
             <li><a href="#">Categories</a></li>
-			<li><a href="{{ url_for('get_recipes') }}">Recipe</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">Recipe</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Log Out</a></li>
-			<li><a href="#">Sign Up</a></li>
-		</ul>
-	</header>
-    {% block content %}
-    {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+    </header>
+    <main class="page-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!--Footer-->
+    <footer class="page-footer orange lighten-5 ">
+        <div class="footer-copyright">
+            <div class="container brown-text text-darken-2">
+                © 2014 Copyright Ruby
+                <a class="right" href="https://www.youtube.com">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>
+
 </html>

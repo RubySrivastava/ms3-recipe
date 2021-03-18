@@ -116,10 +116,7 @@
 .landing-text a:hover {
     color: white;
 }
-.link-deco{
-    text-decoration: underline;
-    color: maroon;
-}
+
 .search-container button {
   padding: 10px 10px;
   margin-top: 10px;

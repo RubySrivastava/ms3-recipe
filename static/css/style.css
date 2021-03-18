@@ -20,13 +20,17 @@
 .navbar .navbar-toggler {
   border: 0;
 }
-.navbar .navbar-nav a {
+.navbar .navbar-nav .nav-link {
   font-weight: bold;
   color: #dfa813;
   font-family: "Expo";
 }
+
 .ml-auto {
   margin-left: inherit;
+}
+.nav-item li a:hover {
+  background: #e84610;
 }
 /*media query*/
 @media screen and (max-width: 500px) {
@@ -67,7 +71,7 @@
   line-height: 7px;
   text-align: center;
   color: #dfa813;
-  background: #8f8f8f;
+  background: #f5f5ea;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
@@ -81,5 +85,48 @@
   text-align: center;
 }
 /*End Footer*/
+#home-image {
+  background: url("../image/home.jpg") no-repeat bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #8f8f8f;
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  position: relative;
+}
+.landing-text {
+    color: #dfa813;
+    
+    font-family: 'Expo',sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: 10px 10px 20px #fafafa;
+    padding:10px;
+    margin-bottom: 50px;
+    margin-top: 50%; 
+    align-items: center;
+    text-align: center;
+    height:fit-content;
+} 
+.landing-text a:hover {
+    color: white;
+}
+.link-deco{
+    text-decoration: underline;
+    color: maroon;
+}
+/*media query*/
+@media screen and (max-width: 768px) {
+  .landing-text {
+    font-size:15px;
+  }
+  h2 {
+     font-size:20px; 
+  }
+}
+/*End Home Page*/
 
 

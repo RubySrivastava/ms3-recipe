@@ -6,6 +6,12 @@
             <div class="col-12 landing-text">
                 <h2>Ruby's Kitchen</h2>
             </div>
+            <div class="search-container">
+                <form action={{ url_for('search') }}>
+                    <input type="text" placeholder="Search Recipe.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

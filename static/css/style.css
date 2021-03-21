@@ -138,4 +138,34 @@
 }
 /*End Home Page*/
 
+/* Sign In Page*/
+.container-login {
+  background: url("../image/login.jpg") no-repeat bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #f5f5ea;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+.login-box {
+  background-color: #f5f5ea;
+  padding: 2rem 1rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  min-width: 400px;
+  font-family: "expo";
+  color: #131315;
+}
+.forgot-pass {
+  color: #131315;
+  align-items: center;
+  text-align: right;
+}
+/*End Sign in page*/
+
 

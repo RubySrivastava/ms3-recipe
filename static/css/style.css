@@ -145,7 +145,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #f5f5ea;
+  background-color: dimgray;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -167,5 +167,21 @@
   text-align: right;
 }
 /*End Sign in page*/
+
+/*Sign up Page*/
+.container-signup {
+  background: url("../image/signup.jpg") no-repeat bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: dimgray;
+  display: flex;
+  height: 100vh;
+  justify-content: right;
+  position: relative;
+}
+
+/*End Sign up Page*/
 
 

@@ -36,6 +36,13 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":

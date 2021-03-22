@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-content container-fluid message-container img-fluid">
+        <div class="row ">
+            <div class="col-12">
+                <section class="callout message-box text-center">
+                    <form onsubmit="#">
+                        <div>
+                            <h1 class="header-form">Send Feedback!</h1>
+                        </div>
+                        <div>
+                            <input type="text" name="name" class="form-control mb-3" id="fullname" placeholder="Name"
+                                required />
+                            <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
+                                placeholder="Email" required />
+                            <textarea rows="5" name="message" class="form-control mb-3" id="message"
+                                placeholder="Message" required></textarea>
+                            <button type="submit" class="btn btn-secondary btn-blue center-block">Submit</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            
+            <div class="col-12">
+                <h4>Want to post recipe?<a href="{{url_for ('signup') }}">Sign Up</a></h4>
+                <h4>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h4>
+                <a>Subscribe here for newsletter</a>
+                <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
+                                placeholder="Email" required />
+                <button type="submit" class="btn btn-secondary btn-blue center-block">Submit</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -183,5 +183,43 @@
 }
 
 /*End Sign up Page*/
+.message-container {
+  background: url("../image/contact.jpg") no-repeat bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: dimgray;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+.message-box {
+  background-color: #f5f5ea;
+  padding: 2rem 1rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  min-width: 300px;
+  font-family: "expo";
+  color: #131315;
+}
+.header-form {
+    font-size:20px;
+}
+
+/*media query*/
+@media screen and (max-width: 500px) {
+  .message-box {
+    padding: 1rem 1rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.header-form {
+    font-size:15px;
+}
+}
+/*End Contact Page*/
 
 

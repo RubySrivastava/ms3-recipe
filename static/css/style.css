@@ -221,5 +221,19 @@
 }
 }
 /*End Contact Page*/
+.recipe-read {
+    text-align: justify;
+    margin-top: 50px;
+}
 
+.recipe-img{
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+.recipe-title {
+    color: #000;
+    font-size: 17px;
+}
 

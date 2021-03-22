@@ -1,8 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-
-    
     {% for recipe in recipes %}
+    <div class="page-content container-fluid img-fluid">
+    
+    <div class="row">
+        <h3 class="center-align recipe-read">{{recipe.recipe_name}}</h3>   
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col sm-4">
+                <h6>Category: {{recipe.category_name}}</h6>
+                <h6>Recipe : {{recipe.recipe_name}}</h6>
+                <h6>Chef : {{recipe.chef}}</h6>
+                <br>
+                <h6>Serves : {{recipe.serving}}</h6>
+                <h6>Prep Time : {{recipe.prep_time}}</h6>
+                <h6>Cook Time : {{recipe.cook_time}}</h6>
+                <h6>Total Time : {{recipe.total_time}}</h6>
+            </div>
+            <div class="col sm-8"> 
+                    <img class="recipe-img" src="{{recipe.image}}" alt="Apple Pie">
+            </div>
+        </div>   
+    </div>
+    {% endfor %}
+
+    <!--{% for recipe in recipes %}
         {{ recipe.recipe_name }}<br>
         {{ recipe.category_name }}<br>
         {{ recipe.serving }}<br>
@@ -11,6 +34,6 @@
         {{ recipe.total_time }}<br>
         {{ recipe.ingredients }}<br>
         {{ recipe.directions }}<br>
-    {% endfor %}
-
+    {% endfor %}-->
+    </div>
 {% endblock %}

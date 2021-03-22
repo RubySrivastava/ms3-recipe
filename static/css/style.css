@@ -223,6 +223,7 @@
 /*End Contact Page*/
 .recipe-read {
     text-align: justify;
+    align-items: center;
     margin-top: 50px;
 }
 

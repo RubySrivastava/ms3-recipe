@@ -23,6 +23,11 @@ def home():
     return render_template("home.html") 
 
 
+@app.route("/mypage")
+def mypage():
+    return render_template("mypage.html")
+
+
 @app.route("/recipes")
 def recipes():
     recipes = mongo.db.recipes.find()

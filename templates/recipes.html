@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for recipe in recipes %}
-    <div class="page-content container-fluid img-fluid">
-    
+{% for recipe in recipes %}
+<div class="page-content container-fluid img-fluid">
+
     <div class="row">
-        <h3 class="center-align recipe-read">{{recipe.recipe_name}}</h3>   
+        <h3 class="center-align recipe-read">{{recipe.recipe_name}}</h3>
     </div>
     <div class="container">
         <div class="row">
@@ -18,14 +18,37 @@
                 <h6>Cook Time : {{recipe.cook_time}}</h6>
                 <h6>Total Time : {{recipe.total_time}}</h6>
             </div>
-            <div class="col sm-8"> 
-                    <img class="recipe-img" src="{{recipe.image}}" alt="Apple Pie">
+            <div class="col sm-8">
+                <img class="recipe-img" src="{{recipe.image}}" alt="Apple Pie">
             </div>
-        </div>   
-    </div>
-    {% endfor %}
+        </div>
 
-    <!--{% for recipe in recipes %}
+        <div class="row">
+            <div class="col sm-4">
+                <h4>Ingredients</h4>
+                <ul>
+                    {% for list in recipe.ingredients %}
+                    <li>
+                        <p>{{list}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col sm-8">
+                <h4>Directions</h4>
+                <ol>
+                    {% for steps in recipe.directions %}
+                    <li>
+                        <p>{{steps}}</p>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+        <!--{% for recipe in recipes %}
         {{ recipe.recipe_name }}<br>
         {{ recipe.category_name }}<br>
         {{ recipe.serving }}<br>
@@ -35,5 +58,5 @@
         {{ recipe.ingredients }}<br>
         {{ recipe.directions }}<br>
     {% endfor %}-->
-    </div>
-{% endblock %}
+    
+    {% endblock %}

@@ -23,23 +23,11 @@ def home():
     return render_template("home.html") 
 
 
-@app.route("/mypage")
-def mypage():
-    return render_template("mypage.html")
-
-
-@app.route("/recipes")
-def recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
-
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     tasks = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
-
 
 
 @app.route("/signup", methods=["GET", "POST"])
@@ -95,10 +83,22 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/mypage")
+def mypage():
+    return render_template("mypage.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
+
+@app.route("/recipes")
+def recipes():
+    recipes = mongo.db.recipes.find()
+    return render_template("recipes.html", recipes=recipes)
+
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -55,6 +55,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">Category</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">Dessert</a></li>
+                                <li><a class="dropdown-item" href="#">Snacks</a></li>
+                                <li><a class="dropdown-item" href="#">Main Course</a></li>
+                                <li><a class="dropdown-item" href="#">Drinks</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for ('recipes') }}">Categories</a>
                         </li>

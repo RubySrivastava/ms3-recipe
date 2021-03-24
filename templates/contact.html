@@ -5,7 +5,7 @@
         <div class="row ">
             <div class="col-12">
                 <section class="callout message-box text-center">
-                    <form onsubmit="#">
+                    <form onsubmit="return sendMail(this);">
                         <div>
                             <h1 class="header-form">Send Feedback!</h1>
                         </div>
@@ -20,13 +20,26 @@
                         </div>
                     </form>
                 </section>
+                <div aria-live="polite" aria-atomic="true"
+                    class="d-flex justify-content-center align-items-center w-100">
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"
+                        data-delay="5000">
+                        <div class="toast-header">
+                            <strong class="mr-auto">Thank You!</strong>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                        </div>
+                        <div class="toast-body">
+                            We will contact you soon.
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="col-12">
                 <h4>Want to post recipe?<a href="{{url_for ('signup') }}">Sign Up</a></h4>
                 <h4>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h4>
                 <a>Subscribe here for newsletter</a>
-                <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
+                <input type="email" name="email_id" class="form-control mb-3" id="email_id"
                                 placeholder="Email" required />
                 <button type="submit" class="btn btn-secondary btn-blue center-block">Submit</button>
             </div>

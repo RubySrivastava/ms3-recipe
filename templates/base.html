@@ -52,14 +52,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
-                        {% if session.user %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
-                        </li>
-                        {% else %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Category</a>
@@ -74,6 +66,14 @@
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('contact') }}">Contact</a>
                         </li>
+                        {% if session.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
+                        </li>
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
                         </li>

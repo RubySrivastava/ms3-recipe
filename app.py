@@ -123,6 +123,34 @@ def recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if not session.get("user"):
+        return render_template("error_handlers/404.html")
+
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "chef": request.form.get("chef"),
+            "image": request.form.get("image"),
+            "serving": request.form.get("serving"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "total_time": request.form.get("total_time"),
+            "ingredients": request.form.get("ingredients"),
+            "directions": request.form.get("directions"),
+            "username": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe is successfully added")
+        return redirect(url_for("mypage", username=session['user']))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "#", categories=categories)
+
+
 @app.route("/newsletter", methods=["GET", "POST"])
 def newsletter():
     if request.method == "POST":

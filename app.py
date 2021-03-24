@@ -85,9 +85,23 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/mypage")
+@app.route("/mypage", methods=["GET", "POST"])
 def mypage():
-    return render_template("mypage.html")
+    if not session.get("user"):
+        return render_template("error_handlers/404.html")
+        
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        if session["user"] == "admin@gmail.com":
+            user_recipes = list(mongo.db.recipes.find())
+        else:
+            user_recipes = list(
+                mongo.db.recipes.find({"username": session["user"]}))
+        return render_template(
+            "mypage.html", username=username, user_recipes=user_recipes)
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")

@@ -108,7 +108,25 @@ def recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
-    
+
+@app.route("/newsletter", methods=["GET", "POST"])
+def newsletter():
+    if request.method == "POST":
+        # check if email id already exists in db
+        existing_user = mongo.db.newsletter.find_one(
+            {"email_id": request.form.get("email_id").lower()})
+
+        if existing_user:
+            flash("Already Subscribed")
+            return redirect(url_for("contact"))
+
+        newsletter = {
+            "email_id": request.form.get("email_id").lower(),
+        }
+        mongo.db.newsletter.insert_one(newsletter)
+    return render_template("contact.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

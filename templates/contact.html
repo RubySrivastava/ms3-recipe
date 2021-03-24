@@ -39,9 +39,11 @@
                 <h4>Want to post recipe?<a href="{{url_for ('signup') }}">Sign Up</a></h4>
                 <h4>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h4>
                 <a>Subscribe here for newsletter</a>
+                <form method="POST" action="{{ url_for('newsletter') }}">
                 <input type="email" name="email_id" class="form-control mb-3" id="email_id"
                                 placeholder="Email" required />
                 <button type="submit" class="btn btn-secondary btn-blue center-block">Submit</button>
+                </form>
             </div>
         </div>
     </div>

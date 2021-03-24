@@ -27,9 +27,9 @@ def home():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    search = request.form.get("search")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
-    return render_template("recipes.html", recipes=recipes)
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("home.html")
 
 
 @app.route("/signup", methods=["GET", "POST"])

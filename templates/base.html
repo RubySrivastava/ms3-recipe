@@ -52,9 +52,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
+                        {% if session.user %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
+                        </li>
+                        {% else %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Category</a>
@@ -64,14 +69,7 @@
                                 <li><a class="dropdown-item" href="#">Snacks</a></li>
                                 <li><a class="dropdown-item" href="#">Main Course</a></li>
                                 <li><a class="dropdown-item" href="#">Drinks</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Separated link</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url_for ('recipes') }}">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('contact') }}">Contact</a>
@@ -79,9 +77,7 @@
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">Sign Out</a>
-                        </li>
+                       {% endif %}
                     </ul>
                 </div>
             </nav>

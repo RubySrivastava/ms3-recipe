@@ -3,12 +3,10 @@
 
 <div class="container-fluid container-login img-fluid">
       <div class="row ">
-        <div class="col-12">
+        
           <section class="callout login-box text-center">
-            <form>
-              <div>
-                <h1>Welcome Back!</h1>
-              </div>
+            <form class="col-12" method="POST" action="{{ url_for('login') }}">
+              
               <div class="form-group row">
                 <div class="col-sm-12">
                   <input type="email" class="form-control" id="inputEmail3" placeholder="Email Address"/>
@@ -42,6 +40,6 @@
           </section>
         </div>
       </div>
-    </div>
+    
 
 {% endblock %}

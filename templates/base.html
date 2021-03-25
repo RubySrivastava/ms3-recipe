@@ -46,12 +46,11 @@
 </head>
 
 <body>
-
     <header>
         <!--Navbar-->
         <div class="container-fluid">
             <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-                <a href="{{url_for ('home') }}" class="navbar-brand"><i class="fa fa-utensils list-inline-item"
+                <a href="{{url_for ('home') }}" class="navbar-brand active"><i class="fa fa-utensils list-inline-item"
                         aria-hidden="true"></i>Ruby's Kitchen</a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -78,20 +77,33 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
                         </li>
-                       {% endif %}
+                        {% endif %}
                     </ul>
                 </div>
             </nav>
         </div>
         <!--Navbar-->
     </header>
+
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row">
+                        <h4 class="center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
     {% block content %}
     {% endblock %}
@@ -136,7 +148,7 @@
     <!--footer-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/sendEmail.js') }}""></script>
+    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>

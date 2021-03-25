@@ -2,7 +2,7 @@
 .page-content{
       min-height: calc(100vh - 56px);
 }
-/*Header*/
+/*Header Navbar*/
 .navbar {
   margin-bottom: 0;
   width: 100%;
@@ -12,7 +12,7 @@
   padding-left: 0.6rem;
 }
 .navbar .navbar-brand {
-  color: #dfa813;
+  color: brown;
   font-family: "Expo";
   font-weight: bold; 
   font-style: italic;
@@ -22,16 +22,18 @@
 }
 .navbar .navbar-nav .nav-link {
   font-weight: bold;
-  color: #dfa813;
+  color: brown;
   font-family: "Expo";
 }
 
 .ml-auto {
   margin-left: inherit;
 }
-.nav-item li a:hover {
-  background: #e84610;
+
+.navbar a:hover {
+  background-color: #000;
 }
+
 /*media query*/
 @media screen and (max-width: 500px) {
   .navbar a {
@@ -78,7 +80,7 @@
   -o-transition: all 0.35s ease-in-out;
 }
 .social-links li a i:hover {
-  background: #e84610;
+  background: #000;
 }
 #footer-details {
   padding: 10px;

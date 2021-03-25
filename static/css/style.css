@@ -1,13 +1,16 @@
-/*body*/
+/***************body***************/
 body {
   font-family: Cinzel, serif;
 }
-/*End body*/
-/* Content*/
+/***************End body***************/
+
+/**************Content************/
 .page-content{
       min-height: calc(100vh - 56px);
 }
-/*Header Navbar*/
+/**************End Content************/
+
+/***************Header************/
 .navbar {
   margin-bottom: 0;
   width: 100%;
@@ -25,6 +28,10 @@ body {
 .navbar .navbar-toggler {
   border: 0;
 }
+.navbar-toggler {
+  background-color: brown;
+}
+
 .navbar .navbar-nav .nav-link {
   font-weight: bold;
   color: brown;
@@ -39,7 +46,7 @@ body {
   background-color: #000;
 }
 
-/*media query*/
+/***************media query**************/
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
@@ -49,26 +56,31 @@ body {
     font-size: 20px;
   }
 }
-/*End Header*/
+/***************End Header***************/
 
-/*footer*/
+/****************footer******************/
 .footer {
   background-color:#f5f5ea; 
-  color: #dfa813;
+  color: brown;
   min-height: 80px;
   width: 100%;
   bottom: 0px;
   margin-top: auto;
 }
-.f-text{
-    font-family:"Expo";
-}
+
 .footer-div {
     padding-top: 10px;
 }
+
+#footer-details {
+  padding: 10px;
+  text-align: center;
+}
+
 .social-links {
   padding-bottom: 10px;
 }
+
 .social-links li a i {
   width: 32px;
   height: 32px;
@@ -77,21 +89,20 @@ body {
   font-size: 20px;
   line-height: 7px;
   text-align: center;
-  color: #dfa813;
+  color: brown;
   background: #f5f5ea;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
+
 .social-links li a i:hover {
   background: #000;
 }
-#footer-details {
-  padding: 10px;
-  text-align: center;
-}
-/*End Footer*/
+
+/******************End Footer****************/
+
 #home-image {
   background: url("../image/home.jpg") no-repeat bottom right;
   -webkit-background-size: cover;

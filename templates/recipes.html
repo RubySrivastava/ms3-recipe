@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 {% for recipe in recipes %}
 <div class="page-content container-fluid img-fluid">
 
@@ -46,17 +47,6 @@
             </div>
         </div>
     </div>
-{% endfor %}
+    {% endfor %}
 
-        <!--{% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.serving }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.total_time }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.directions }}<br>
-    {% endfor %}-->
-    
     {% endblock %}

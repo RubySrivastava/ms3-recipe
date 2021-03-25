@@ -22,7 +22,7 @@
                         <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
                             <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
                             <span class="card-title recipe-title">{{ recipe.recipe_name }}</span>
-                            <a href="#">Edit recipe</a>
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit recipe</a>
                             <a href="#">Delete recipe</a>
                         </a>
                     </div>

@@ -151,6 +151,34 @@ def add_recipe():
         "add_recipe.html", categories=categories)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    
+    if not session.get("user"):
+        return render_template("error_handlers/404.html")
+
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "chef": request.form.get("chef"),
+            "image": request.form.get("image"),
+            "serving": request.form.get("serving"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "total_time": request.form.get("total_time"),
+            "ingredients": request.form.get("ingredients"),
+            "directions": request.form.get("directions"),
+            "username": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
 @app.route("/newsletter", methods=["GET", "POST"])
 def newsletter():
     if request.method == "POST":

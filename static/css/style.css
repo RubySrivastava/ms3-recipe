@@ -1,3 +1,8 @@
+/*body*/
+body {
+  font-family: Cinzel, serif;
+}
+/*End body*/
 /* Content*/
 .page-content{
       min-height: calc(100vh - 56px);

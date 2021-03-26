@@ -103,6 +103,7 @@ body {
 
 /******************End Footer****************/
 
+/******************Home Page*****************/
 #home-image {
   background: url("../image/home.jpg") no-repeat bottom right;
   -webkit-background-size: cover;
@@ -115,44 +116,54 @@ body {
   justify-content: center;
   position: relative;
 }
+
 .landing-text {
-    color: #dfa813;
+    color: brown;
     background-size: cover;
     background-color: #f5f5ea;
     border-radius: 50%;
-    font-family: 'Expo',sans-serif;
     font-size: 20px;
     font-style: italic;
     text-shadow: 10px 10px 20px #fafafa;
-    padding:20px;
-    margin-bottom: 50px;
-    margin-top: 50%; 
+    padding:10px;
+    margin-bottom: 30px;
+    margin-top: 30%; 
     align-items: center;
     text-align: center;
     height:fit-content;
 } 
-.landing-text a:hover {
-    color: white;
+
+/************Search Box*************/
+.search-box {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 70%;
+    background: #f5f5ea;
+    margin:auto;   
 }
 
-.search-box {
-    align-items: center;
-    text-align: center;
-    padding: 10px 10px;
-    margin-top: 10px;
-     
+.search-box input {
+    min-width: 400px;
+    height: 40px;
 }
 .search-box button {
-  align-items: center;
-  text-align: center; 
-  padding: 10px 10px;
-  margin-top: 10px;
-  margin-right: 20px;
-  background: #dfa813;
-  font-size: 20px;
-  border: none;
+  float: right;
+  width: 10%;
+  padding: 10px;
+  background: brown;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
   cursor: pointer;
+  height:40px;
 }
+
+.search-box button:hover {
+    background-color: #000;
+}
+
 .top-text {
     padding-top: 50px;
     margin:20px;
@@ -280,4 +291,7 @@ body {
     align-items: center;
     text-align: center;
 }
-
+/*************Flash*************/
+.flashes h4 {
+    line-height: 2;
+}

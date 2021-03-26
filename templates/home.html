@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="page-content container-fluid container-wrapper" id="home-image">
-    <div class="row">
+<div class="container-fluid img-fluid" id="home-image">
+    <div class="row home-page">
         <div class="col-12 landing-text">
             <i class="fa fa-utensils" aria-hidden="true">
                 <h2>Ruby's Kitchen</h2>
@@ -17,21 +17,16 @@
     </div>
 </div>
 <section>
-    <div class="top-text">
-        <p>A great introduction to cultures is their cuisine.
-            It not only reflect their evolution but also their beliefs and traditions.</p>   
-    </div>
-</section>
-<section>
-    <div class="row ">
-            <div class="col-sm-12">
-                <h3 class="center-align">Recipes</h3>
-                <div class="row">
+    <div class="row home-page">
+            <div class="col-12">
+                <h3 class="recipe-header">Recipes</h3>
+                <div class="row home-page">
                     {% for recipe in recipes %}
                         <div class="col-sm-4 recipe-read">
                             <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
                                 <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                                <span class="card-title recipe-title">{{ recipe.recipe_name }}</span>
+                                <span class="card-title recipe-title">{{ recipe.recipe_name }}</span><br>
+                                <span class="card-title recipe-title">by {{ recipe.chef }}</span>
                             </a>
                         </div>
                     {% endfor %}

@@ -14,7 +14,7 @@ body {
 .navbar {
   margin-bottom: 0;
   width: 100%;
-  background-color:#f5f5ea;
+  background-color: #f5f5ea;
   border: 0;
   display: flex !important;
   padding-left: 0.6rem;
@@ -207,6 +207,14 @@ body {
     color: #000;
     font-size: 20px;
 }
+.recipe-name {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
 /*End Home Page*/
 
 /* Sign In Page*/
@@ -223,7 +231,7 @@ body {
   position: relative;
 }
 .login-box {
-  background-color: #f5f5ea;
+  background-color: bisque;
   padding: 2rem 1rem;
   margin-top: 6rem;
   margin-bottom: 2rem;
@@ -301,4 +309,10 @@ body {
 /*************Flash*************/
 .flashes h4 {
     line-height: 2;
+}
+.btn-brown {
+    background-color: brown;
+    color: #ffffff;
+    width: 90px;
+    margin:10px;
 }

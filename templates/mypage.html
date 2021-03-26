@@ -1,36 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="page-content">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12 profile-header">
             <h2>Welcome {{ username }}'s Page!</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <h5><a href="{{ url_for('add_recipe') }}">Add new recipe +</a></h5>
+        <div class="col-12 profile-header">
+            <a class="btn-crud-recipe" href="{{ url_for('add_recipe') }}">Add new recipe +</a>
         </div>
     </div>
     <section>
         <div class="row ">
-            <div class="col-sm-12">
-                <h3 class="center-align">Recipes</h3>
-                <div class="row">
-                    {% for recipe in user_recipes %}
-                    <div class="col-sm-4 recipe-read">
-                        <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
-                            <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                            <span class="card-title recipe-title">{{ recipe.recipe_name }}</span>
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit recipe</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete recipe</a>
-                        </a>
-                    </div>
-
-                    {% endfor %}
-                </div>
+            <div class="col-12">
+                <h3 class="recipe-header">Recipes</h3>
             </div>
         </div>
+        <div class="row">
+            {% for recipe in user_recipes %}
+            <div class="col-sm-4 recipe-read">
+                <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
+                    <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
+                    <span class="card-title recipe-title align-items">{{ recipe.recipe_name }}</span><br>
+                    <a class="btn-crud-recipe align-items" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit recipe</a>
+                    <a class="btn-crud-recipe" href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete recipe</a>
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+
+
     </section>
 
 </div>

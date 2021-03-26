@@ -231,7 +231,7 @@ body {
   position: relative;
 }
 .login-box {
-  background-color: bisque;
+  background-color: #f5f5ea;
   padding: 2rem 1rem;
   margin-top: 6rem;
   margin-bottom: 2rem;
@@ -280,8 +280,7 @@ body {
   margin-top: 6rem;
   margin-bottom: 2rem;
   width: 100%;
-  min-width: 300px;
-  font-family: "expo";
+  min-width: 400px;
   color: #131315;
 }
 .header-form {

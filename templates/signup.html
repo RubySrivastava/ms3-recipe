@@ -1,45 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="page-content container-fluid container-signup img-fluid">
-      <div class="row ">
-      
-          <section class="callout login-box text-center">
-            <form class="col-12" method="POST" action="{{ url_for('signup') }}">
-              
-              <div class="form-group row">
-                <div class="col-sm-12">
-                  <input type="email" name="username" class="form-control" id="inputEmail3" placeholder="Email Address"/>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-12">
-                  <input
-                    type="password"
-                    name="password"
-                    class="form-control"
-                    id="inputPassword2"
-                    placeholder="Password"
-                  />
-                </div>
-              </div>
-             <div class="form-group row">
-                <div class="col-sm-12">
-                  <button type="submit" class="btn btn-primary">Sign Up!</button>
-                </div>
-              </div>
-              <div >
-                <span><small>Already Member! </small></span
-                ><span
-                  ><a class="btn btn--cta" href="{{url_for ('login') }}">
-                  Sign In!
-                </a></span
-                >
-              </div>
-            </form>
-          </section>
-      
-      </div>
+<div class="container-fluid container-signup img-fluid">
+    <h3 class="top-text">Sign Up!</h3>
+    <div class="row ">
+        <div class="col-12">
+            
+            <section class="callout login-box text-center">
+                <form method="POST" action="{{ url_for('signup') }}">
+                    <h3>Sign Up!</h3>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="email" name="username" class="form-control" id="inputEmail3"
+                                placeholder="Email Address" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="password" name="password" class="form-control" id="inputPassword2"
+                                placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-brown">Sign Up!</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span><small>Already Registered! </small></span><span><a class="btn btn-brown"
+                                href="{{url_for ('login') }}">
+                                Sign In!
+                            </a></span>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
+</div>
 
 {% endblock %}

@@ -120,10 +120,13 @@ def contact():
 
 
 #--------------Recipes description-------------#
-@app.route("/recipes")
-def recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+@app.route("/recipes/<recipe_id>")
+def recipes(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if not recipe:
+        return render_template("error_handlers/404.html")
+        
+    return render_template("recipes.html", recipe=recipe)
 
 
 #--------------Add new recipe to db-------------#

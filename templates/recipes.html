@@ -28,7 +28,7 @@
             <div class="col sm-4">
                 <h4>Ingredients</h4>
                 <ul>
-                    {% for list in recipe.ingredients %}
+                    {% for list in recipe.ingredients.splitlines() %}
                     <li>
                         <p>{{list}}</p>
                     </li>
@@ -38,7 +38,7 @@
             <div class="col sm-8">
                 <h4>Directions</h4>
                 <ol>
-                    {% for steps in recipe.directions %}
+                    {% for steps in recipe.directions.splitlines() %}
                     <li>
                         <p>{{steps}}</p>
                     </li>

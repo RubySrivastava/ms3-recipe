@@ -63,7 +63,7 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Category</a>
                             <!--Dropdown list for Category-->
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" id="selectedDropdown">
                                 <li><a class="dropdown-item" href="#">All</a></li>
                                 <li><a class="dropdown-item" href="#">Dessert</a></li>
                                 <li><a class="dropdown-item" href="#">Snacks</a></li>
@@ -96,13 +96,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h4 class="center-align">{{ message }}</h4>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
     </section>
 

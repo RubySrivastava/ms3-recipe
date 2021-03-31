@@ -343,3 +343,7 @@ body {
   font-family: "expo";
   color: #131315;
 }
+.flashes h4 {
+    margin-top:70px;
+    line-height: 2;
+}

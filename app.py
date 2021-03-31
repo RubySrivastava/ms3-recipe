@@ -36,6 +36,23 @@ def search():
     return render_template("recipe.html", recipes=recipes)
 
 
+@app.route("/recipe/<categories>")
+def recipe(categories):
+    # Show recipes of that specific category
+    if categories == "all":
+        recipes = list(mongo.db.recipes.find())
+    elif categories == "snacks":
+        recipes = list(mongo.db.recipes.find({"category_name": "Snacks"}))
+    elif categories == "main_course":
+        recipes = list(mongo.db.recipes.find({"category_name": "Main_Course"}))
+    elif categories == "dessert":
+        recipes = list(mongo.db.recipes.find({"category_name": "Dessert"}))
+    elif categories == "drinks":
+        recipes = list(mongo.db.recipes.find({"category_name": "Drinks"}))
+
+    return render_template(
+        "recipe.html", recipes=recipes, categories=categories)
+
 #--------------User signup-------------#
 @app.route("/signup", methods=["GET", "POST"])
 def signup():

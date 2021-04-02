@@ -136,6 +136,7 @@ body {
 @media screen and (max-width: 768px) {
   .landing-text {
     font-size:15px;
+    margin-bottom: 20px;
   }
   h2 {
      font-size:20px; 
@@ -172,17 +173,28 @@ body {
     background-color: #000;
 }
 
-
-/*media query*/
 @media screen and (max-width: 768px) {
-  .landing-text {
-    font-size:15px;
-  }
-  h2 {
-     font-size:20px; 
-  }
+  .search-box {
+    padding: 10px;
+    font-size: 15px;
+   
+    width: 80%;
+    
 }
 
+.search-box input {
+    min-width: 200px;
+    
+}
+.search-box button {
+ 
+  
+  width:15%;
+  font-size: 15px;
+  
+  
+}
+}
 .recipe-header {
     padding-top: 50px;
     margin:30px;

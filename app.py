@@ -1,4 +1,4 @@
-#--------------Import files-------------#
+#--Import files--#
 import os
 from flask import (
     Flask, flash, render_template,
@@ -12,7 +12,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-#--------------Config-------------#
+#--Configuration--#
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -20,7 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#--------------Home Page-------------#
+#--Home Page--#
 @app.route("/")
 @app.route("/home")
 def home():
@@ -28,7 +28,7 @@ def home():
     return render_template("home.html", recipes=recipes) 
 
 
-#--------------Search Recipe-------------#
+#--Search Recipe--#
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -36,9 +36,10 @@ def search():
     return render_template("recipe.html", recipes=recipes)
 
 
+#--Recipe By Category--#
 @app.route("/recipe/<categories>")
 def recipe(categories):
-    # Show recipes of that specific category
+    #--Show recipes of that specific category--#
     if categories == "all":
         recipes = list(mongo.db.recipes.find())
     elif categories == "snacks":
@@ -53,7 +54,8 @@ def recipe(categories):
     return render_template(
         "recipe.html", recipes=recipes, categories=categories)
 
-#--------------User signup-------------#
+
+#--User SignUp--#
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -77,7 +79,7 @@ def signup():
     return render_template("signup.html")
 
 
-#--------------Users login-------------#
+#--Users Login--#
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -101,11 +103,11 @@ def login():
     return render_template("login.html")
 
 
-#--------------Mypage(Profile)-------------#
+#--Open Mypage--#
 @app.route("/mypage", methods=["GET", "POST"])
 def mypage():
     if not session.get("user"):
-        return render_template("error_handlers/404.html")
+        return render_template("404.html")
         
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -121,36 +123,36 @@ def mypage():
     return redirect(url_for("login"))
 
 
-#--------------Logout-------------#
+#--Logout--#
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    #--Remove user from session cookie--#
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
-#--------------Contact Page-------------#
+#--Contact Page--#
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
 
-#--------------Recipes description-------------#
+#--Recipes Description--#
 @app.route("/recipes/<recipe_id>")
 def recipes(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     if not recipe:
-        return render_template("error_handlers/404.html")
+        return render_template("404.html")
         
     return render_template("recipes.html", recipe=recipe)
 
 
-#--------------Add new recipe to db-------------#
+#--Add New Recipe To DB--#
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if not session.get("user"):
-        return render_template("error_handlers/404.html")
+        return render_template("404.html")
 
     if request.method == "POST":
         recipe = {
@@ -175,12 +177,12 @@ def add_recipe():
         "add_recipe.html", categories=categories)
 
 
-#--------------Edit recipe from db-------------#
+#--Edit Recipe From DB--#
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     
     if not session.get("user"):
-        return render_template("error_handlers/404.html")
+        return render_template("404.html")
 
     if request.method == "POST":
         submit = {
@@ -204,7 +206,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
-#--------------Delete recipe-------------#
+#--Delete Recipe From DB--#
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -212,7 +214,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("mypage"))
 
 
-#--------------Newsletter-------------#
+#--Subscribe Newsletter--#
 @app.route("/newsletter", methods=["GET", "POST"])
 def newsletter():
     if request.method == "POST":
@@ -230,6 +232,7 @@ def newsletter():
     return render_template("contact.html")
 
 
+#--App Run--#
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -128,18 +128,19 @@ body {
     font-style: italic;
     text-shadow: 10px 10px 20px #fafafa;
     padding: 10px;
-    
     margin-bottom: 30px;
     margin-top: 30%; 
     align-items: center;
     text-align: center;
     height:fit-content;
+    
 } 
 /*media query*/
 @media screen and (max-width: 768px) {
   .landing-text {
     font-size:15px;
     margin-bottom: 20px;
+    width: 50px;
     
   }
   h2 {
@@ -193,7 +194,7 @@ body {
 .search-box button {
  
   
-  width:15%;
+  width:10%;
   font-size: 15px;
   
   
@@ -232,19 +233,40 @@ body {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    margin:20px;
+    
     align-items: center;
     
   }
 .recipe-title {
     color: #000;
     font-size: 20px;
-    font-style: bold;
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
     align-items: center;
     text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .recipe-header {
+    font-size: 20px;
+   
+}
+    .recipe-read {
+   
+    margin-top: 20px;
+  
+}
+.recipe-img {
+    margin:20px;
+}
+
+.recipe-title {
+   
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
 }
 .recipe-name {
     

@@ -2,6 +2,7 @@
 {% block content %}
 
 <div class="container-fluid">
+    <!--Hero Image Section-->
     <section id="home-image">
         <div class="row">
             <div class="col-12 landing-text">
@@ -9,6 +10,7 @@
                     <h2>Ruby's Kitchen</h2>
                 </i>
             </div>
+            <!--Search Box-->
             <div class="col-12">
                 <form class="search-box" action="{{ url_for('search') }}" method="post">
                     <input type="text" placeholder="Search Recipe.." name="query" id="query">
@@ -18,6 +20,7 @@
         </div>
     </section>
 
+    <!--Section To Display All Recipes-->
     <section>
         <div class="recipe-text">
             <h2 class="recipe-header">Recipes</h2>
@@ -27,9 +30,9 @@
             <div class="col-12 col-md-6 col-lg-4 recipe-read">
                 <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
                     <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                    
+
                     <p class="recipe-title">{{ recipe.recipe_name }}<br>
-                    <span class="recipe-title">Chef: {{ recipe.chef }}</span></p>
+                        <span class="recipe-title">Chef: {{ recipe.chef }}</span></p>
                 </a>
             </div>
             {% endfor %}

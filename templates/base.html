@@ -60,15 +60,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{ url_for('recipe', categories='all') }}" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{{ url_for('recipe', categories='all') }}"
+                                id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 Category
                             </a>
+                            <!--Category Dropdown List-->
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url_for('recipe', categories='all') }}">All</a>
                                 <a class="dropdown-item" href="{{ url_for('recipe', categories='snacks') }}">Snacks</a>
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='main_course') }}">Main Course</a>
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='dessert') }}">Dessert</a>
+                                <a class="dropdown-item" href="{{ url_for('recipe', categories='main_course') }}">Main
+                                    Course</a>
+                                <a class="dropdown-item"
+                                    href="{{ url_for('recipe', categories='dessert') }}">Dessert</a>
                                 <a class="dropdown-item" href="{{ url_for('recipe', categories='drinks') }}">Drinks</a>
                             </div>
                         </li>
@@ -95,15 +99,15 @@
     </header>
 
     <section>
-        <!-- flash messages -->
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -111,7 +115,7 @@
         {% block content %}
         {% endblock %}
     </main>
-    
+
     <!--Footer-->
     <footer class="footer footer-div mt-auto container-fluid">
         <div id="footer-details" class="row">
@@ -120,7 +124,7 @@
                 <h5 class="uppercase general-sub">copyright<i class="fa fa-copyright list-inline-item"
                         aria-hidden="true"></i>2020Ruby</h5>
             </div>
-            <!--Social links-->
+            <!--Social Links-->
             <div class="col-sm-6">
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">

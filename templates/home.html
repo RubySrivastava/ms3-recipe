@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid img-fluid" id="home-image">
-    <div class="row home-page">
+<div class="container-fluid" id="home-image">
+    <div class="row">
         <div class="col-12 landing-text">
             <i class="fa fa-utensils" aria-hidden="true">
                 <h2>Ruby's Kitchen</h2>
@@ -17,10 +17,10 @@
     </div>
 </div>
 <section>
-    <div class="row home-page">
+    <div class="row">
             <div class="col-12">
                 <h3 class="recipe-header">Recipes</h3>
-                <div class="row home-page">
+                <div class="row">
                     {% for recipe in recipes %}
                         <div class="col-sm-4 recipe-read">
                             <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">

@@ -1,16 +1,16 @@
-/***************body***************/
+/***************Body***************/
 body {
   font-family: Cinzel, serif;
 }
-/***************End body***************/
+/*End Body*/
 
-/**************Content************/
+/*Content*/
 .page-content{
     min-height: calc(100vh - 56px);
 }
-/**************End Content************/
+/*End Content*/
 
-/***************Header************/
+/*Header*/
 .navbar {
   margin-bottom: 0;
   width: 100%;
@@ -31,22 +31,18 @@ body {
 .navbar-toggler {
   background-color: brown;
 }
-
 .navbar .navbar-nav .nav-link {
   font-weight: bold;
   color: brown;
   font-family: "Expo";
 }
-
 .ml-auto {
   margin-left: inherit;
 }
-
 .navbar a:hover {
   background-color: #000;
 }
-
-/***************media query**************/
+/*Media Query For Navbar*/
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
@@ -56,9 +52,9 @@ body {
     font-size: 20px;
   }
 }
-/***************End Header***************/
+/*End Header*/
 
-/****************footer******************/
+/*Footer*/
 .footer {
   background-color:#f5f5ea; 
   color: brown;
@@ -67,15 +63,12 @@ body {
   bottom: 0px;
   margin-top: auto;
 }
-
 .footer-div {
     padding-top: 10px;
 }
-
 .social-links {
   padding-bottom: 10px;
 }
-
 .social-links li a i {
   width: 32px;
   height: 32px;
@@ -91,19 +84,16 @@ body {
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
-
 .social-links li a i:hover {
   background: #000;
 }
-
 #footer-details {
   padding: 10px;
   text-align: center;
 }
+/*End Footer*/
 
-/******************End Footer****************/
-
-/******************Home Page*****************/
+/*Home Page*/
 #home-image {
   background: url("../image/home.jpg") no-repeat bottom right;
   -webkit-background-size: cover;
@@ -118,7 +108,6 @@ body {
   position: relative;
   
 }
-
 .landing-text {
     color: brown;
     background-size: cover;
@@ -133,21 +122,19 @@ body {
     align-items: center;
     text-align: center;
     height:fit-content;
-    
 } 
-/*media query*/
+/*Media Query For Landing Text*/
 @media screen and (max-width: 768px) {
   .landing-text {
     font-size:15px;
     margin-bottom: 20px;
     width: 50px;
-    
   }
   h2 {
      font-size:20px; 
   }
 }
-/************Search Box*************/
+/*Search Box**/
 .search-box {
     padding: 10px;
     font-size: 17px;
@@ -156,7 +143,6 @@ body {
     background: #f5f5ea;
     margin:auto;   
 }
-
 .search-box input {
     min-width: 400px;
     height: 40px;
@@ -173,51 +159,38 @@ body {
   cursor: pointer;
   height:40px;
 }
-
 .search-box button:hover {
     background-color: #000;
 }
-
+/*Media Query For Search Box*/
 @media screen and (max-width: 768px) {
   .search-box {
     padding: 10px;
     font-size: 15px;
-   
-    width: 80%;
-    
-}
-
-.search-box input {
+    width: 80%; 
+   }
+   .search-box input {
     min-width: 200px;
-    
+   }
+   .search-box button {
+    width:10%;
+    font-size: 15px;
+   }
 }
-.search-box button {
- 
-  
-  width:10%;
-  font-size: 15px;
-  
-  
-}
-}
+/* Display All Recipe*/
 .recipe-text {
     padding-top: 50px;
     margin:20px;
     align-items: center;
 }
 .recipe-header {
-    
-    
     background-color: #f5f5ea;
     color: brown;
     font-size: 30px;
     font-weight: bold;
-    
     padding: 10px;
     align-items: center;
     text-align: center;
-    
-    
     width: 100%;
     padding: 10px;
     align-items: center;
@@ -233,9 +206,7 @@ body {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    
     align-items: center;
-    
   }
 .recipe-title {
     color: #000;
@@ -246,28 +217,26 @@ body {
     align-items: center;
     text-decoration: underline;
 }
+/*Media Query For Display All Recipe*/
 @media screen and (max-width: 768px) {
     .recipe-header {
     font-size: 20px;
-   
-}
+    }
     .recipe-read {
-   
-    margin-top: 20px;
-  
-}
-.recipe-img {
+    margin-top: 20px;    
+    }
+    .recipe-img {
     margin:20px;
-}
-
-.recipe-title {
-   
+    }
+   .recipe-title {
     font-size: 15px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
+   }
 }
-}
+
+
+/*End Home Page*/
 .recipe-name {
     
     margin-bottom: 70px;
@@ -276,8 +245,6 @@ body {
     font-size: 30px;
     text-decoration: underline;
 }
-/*End Home Page*/
-
 /* Sign In Page*/
 .container-login {
   background: url("../image/login.jpg") no-repeat bottom right;

@@ -103,7 +103,7 @@ body {
   background-color: #8f8f8f;
   object-fit: cover;
   display: flex;
-  height: 600px;
+  height: 400px;
   justify-content: center;
   position: relative;
   
@@ -234,9 +234,20 @@ body {
     margin-bottom: 20px;  
    }
 }
-
-
 /*End Home Page*/
+
+/*Recipe Description Page*/
+.recipe-desc-img{
+    display: flex;
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+/* End Recipe Description Page*/
+
 .recipe-name {
     
     margin-bottom: 70px;

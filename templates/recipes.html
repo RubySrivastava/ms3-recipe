@@ -2,12 +2,14 @@
 {% block content %}
 
 <div class="container-fluid img-fluid">
+    <!--Page Heading-->
     <div class="recipe-text">
         <h2 class="recipe-header">Recipe Description</h2>
     </div>
+    <!--Recipe Description-->
     <div class="container">
         <div class="row">
-            <div class="col sm-4">
+            <div class="col-sm-4">
                 <h6>Category: {{recipe.category_name}}</h6>
                 <h6>Recipe : {{recipe.recipe_name}}</h6>
                 <h6>Chef : {{recipe.chef}}</h6>
@@ -17,13 +19,12 @@
                 <h6>Cook Time : {{recipe.cook_time}}</h6>
                 <h6>Total Time : {{recipe.total_time}}</h6>
             </div>
-            <div class="col sm-8">
+            <div class="col-sm-8">
                 <img class="recipe-desc-img" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
             </div>
         </div>
-
         <div class="row">
-            <div class="col sm-4">
+            <div class="col-sm-4">
                 <h4>Ingredients</h4>
                 <ul>
                     {% for list in recipe.ingredients.splitlines() %}
@@ -33,7 +34,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col sm-8">
+            <div class="col-sm-8">
                 <h4>Directions</h4>
                 <ol>
                     {% for steps in recipe.directions.splitlines() %}

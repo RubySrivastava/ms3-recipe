@@ -267,7 +267,7 @@ body {
   margin-top: 6rem;
   margin-bottom: 2rem;
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   font-family: "expo";
   color: #131315;
 }
@@ -291,7 +291,6 @@ body {
   justify-content: right;
   position: relative;
 }
-
 /*End Sign up Page*/
 .message-container {
   background: url("../image/contact.jpg") no-repeat bottom right;

@@ -248,14 +248,6 @@ body {
   }
 /* End Recipe Description Page*/
 
-.recipe-name {
-    
-    margin-bottom: 70px;
-    text-align: center;
-    align-items: center;
-    font-size: 30px;
-    text-decoration: underline;
-}
 /* Sign In Page*/
 .container-login {
   background: url("../image/login.jpg") no-repeat bottom right;
@@ -284,9 +276,9 @@ body {
   align-items: center;
   text-align: right;
 }
-/*End Sign in page*/
+/*End Sign In page*/
 
-/*Sign up Page*/
+/*Sign Up Page*/
 .container-signup {
   background: url("../image/signup.jpg") no-repeat bottom right;
   -webkit-background-size: cover;
@@ -325,7 +317,6 @@ body {
 .header-form {
     font-size:20px;
 }
-
 /*media query*/
 @media screen and (max-width: 500px) {
   .message-box {
@@ -338,16 +329,31 @@ body {
 }
 }
 /*End Contact Page*/
-
+/*My Page*/
 .profile-header {
-    margin-top: 100px;
+    margin-top: 80px;
     align-items: center;
     text-align: center;
 }
-/*************Flash*************/
-.flashes h4 {
-    line-height: 2;
+.add-recipe {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
 }
+
+/*End My Page*/
+.recipe-name {
+    
+    margin-bottom: 70px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+/*Buttons*/
+
 .btn-brown {
     background-color: brown;
     color: #ffffff;
@@ -356,6 +362,7 @@ body {
 }
 .btn-crud-recipe {
     padding-top: 70px;
+    padding-bottom: 30px;
     margin:30px;
     background-color: brown;
     color: white;
@@ -378,6 +385,7 @@ body {
   font-family: "expo";
   color: #131315;
 }
+/*Flash Message*/
 .flashes h4 {
     margin-top:70px;
     line-height: 2;

@@ -390,9 +390,10 @@ body {
 }
 /*Flash Message*/
 .flashes h4 {
-    margin-top:70px;
+    margin-top: 70px;
     line-height: 2;
 }
+/*End Flash Message*/
 .recipe-name {
     
     margin-bottom: 70px;

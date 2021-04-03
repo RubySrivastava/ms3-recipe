@@ -350,6 +350,18 @@ body {
 }
 /*End My Page*/
 
+/*Add/Edit Page*/
+.add-box {
+  background-color: #f5f5ea;
+  padding: 2rem 1rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  min-width: 400px;
+  color: #131315;
+}
+/*End Add/Edit Page*/
+
 /*Buttons*/
 .btn-brown {
     background-color: brown;
@@ -370,16 +382,6 @@ body {
 }
 .btn-crud-recipe a:hover {
     color: #000;
-}
-.add-box {
-  background-color: #f5f5ea;
-  padding: 2rem 1rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  min-width: 400px;
-  font-family: "expo";
-  color: #131315;
 }
 @media screen and (max-width: 500px) {
     .btn-crud-recipe {

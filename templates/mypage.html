@@ -2,17 +2,19 @@
 {% block content %}
 
 <div class="container container-fluid">
+    <!--Page Heading-->
     <div class="row">
         <div class="col-12 profile-header">
             <h2>My Page!</h2>
         </div>
     </div>
+    <!--Add Recipe Button-->
     <div class="row">
         <div class="col-12 add-recipe">
             <a class="btn-crud-recipe" href="{{ url_for('add_recipe') }}">Add new recipe +</a>
         </div>
     </div>
-
+    <!--Display User Recipe-->
     <section>
         <div class="row ">
             <div class="col-12">
@@ -24,12 +26,14 @@
             <div class="col-12 col-md-6 col-lg-4 recipe-read">
                 <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
                     <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                    <span class="recipe-title align-items">{{ recipe.recipe_name }}</span><br>
-                    <a class="btn-crud-recipe align-items"
+                    <span class="recipe-title">{{ recipe.recipe_name }}</span><br>
+                    <div class="add-recipe">
+                    <a class="btn-crud-recipe"
                         href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit
-                        recipe</a>
+                        </a>
                     <a class="btn-crud-recipe" href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete
-                        recipe</a>
+                        </a>
+                    </div>
                 </a>
             </div>
             {% endfor %}

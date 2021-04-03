@@ -336,24 +336,14 @@ body {
     text-align: center;
 }
 .add-recipe {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     align-items: center;
     text-align: center;
 }
-
 /*End My Page*/
-.recipe-name {
-    
-    margin-bottom: 70px;
-    text-align: center;
-    align-items: center;
-    font-size: 30px;
-    text-decoration: underline;
-}
 
 /*Buttons*/
-
 .btn-brown {
     background-color: brown;
     color: #ffffff;
@@ -363,11 +353,10 @@ body {
 .btn-crud-recipe {
     padding-top: 70px;
     padding-bottom: 30px;
-    margin:30px;
+    margin:10px;
     background-color: brown;
     color: white;
     font-size: 20px;
-    width: 200px;
     padding: 10px;
     align-items: center;
     text-align: center;
@@ -389,4 +378,12 @@ body {
 .flashes h4 {
     margin-top:70px;
     line-height: 2;
+}
+.recipe-name {
+    
+    margin-bottom: 70px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: underline;
 }

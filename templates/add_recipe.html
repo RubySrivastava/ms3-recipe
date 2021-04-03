@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid">
+<div class="container container-fluid">
     <div class="row">
         <div class="col-12">
             <section class="callout add-box text-center">
@@ -20,15 +20,17 @@
                         </div>
                     </div>
                     <div class="row">
+                        <label for="recipe_name" class="form-label">Recipe Name</label><br>
                         <div class="input-group mb-3">
-                            <label for="recipe_name" class="form-label">Recipe Name</label>
+                            
                             <input type="text" name="recipe_name" id="recipe_name" class="form-control"
                                 placeholder="Recipe Name" aria-label="Recipe Name" aria-describedby="basic-addon1">
                         </div>
                     </div>
                     <div class="row">
+                        <label for="chef" class="form-label">Chef</label>
                         <div class="input-group mb-3">
-                            <label for="chef" class="form-label">Chef</label>
+                            
                             <input type="text" name="chef" id="chef" class="form-control" placeholder="Chef"
                                 aria-label="Chef" aria-describedby="basic-addon2">
                         </div>
@@ -36,9 +38,10 @@
                     <div class="row">
                         <label for="image" class="form-label">Image URL</label>
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            
                             <input type="text" name="image" class="form-control" id="image"
                                 aria-describedby="basic-addon3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
                         </div>
                     </div>
                     <div class="row">
@@ -102,6 +105,7 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-brown">Add+</button>
+                            <a class="btn btn-brown" href="{{ url_for('mypage', username=session['user']) }}">Cancel</a>
                         </div>
                     </div>
                 </form>

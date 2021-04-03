@@ -108,7 +108,7 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-brown">Update</button>
-                            <button type="submit" class="btn btn-brown">Cancel</button>
+                            <a class="btn btn-brown" href="{{ url_for('mypage', username=session['user']) }}">Cancel</a>
                         </div>
                     </div>
                 </form>

@@ -14,8 +14,8 @@
             <div class="col-12 col-md-6 col-lg-4 recipe-read">
                 <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
                     <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                    <span class="recipe-title">{{ recipe.recipe_name }}</span><br>
-                    <span class="recipe-title">Chef: {{ recipe.chef }}</span>
+                    <p class="recipe-title">{{ recipe.recipe_name }}<br>
+                        <span class="recipe-title">Chef: {{ recipe.chef }}</span></p>
                 </a>
             </div>
             {% endfor %}

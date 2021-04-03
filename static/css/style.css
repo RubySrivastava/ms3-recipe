@@ -341,6 +341,13 @@ body {
     align-items: center;
     text-align: center;
 }
+/*media query*/
+@media screen and (max-width: 500px) {
+    .add-recipe {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+}
 /*End My Page*/
 
 /*Buttons*/
@@ -373,6 +380,11 @@ body {
   min-width: 400px;
   font-family: "expo";
   color: #131315;
+}
+@media screen and (max-width: 500px) {
+    .btn-crud-recipe {
+    font-size: 15px;  
+}
 }
 /*Flash Message*/
 .flashes h4 {

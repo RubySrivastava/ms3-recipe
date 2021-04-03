@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid">
+<div class="container ontainer-fluid">
     <div class="row">
         <div class="col-12">
+            <!--Page Heading-->
             <section class="callout add-box text-center">
-                <h3>Edit Recipe!!</h3>
+                <h2>Edit Recipe!!</h2>
+                <!--Display Recipe Form-->
                 <form method="POST" action="{{ url_for('edit_recipe',recipe_id=recipe._id) }}">
                     <!-- Category name -->
                     <div class="row">
@@ -19,17 +21,18 @@
                             <label for="category_name">Recipe category</label>
                         </div>
                     </div>
+                    <!--Recipe Desription in Edit Mode-->
                     <div class="row">
+                        <label for="recipe_name" class="form-label">Recipe Name</label>
                         <div class="input-group mb-3">
-                            <label for="recipe_name" class="form-label">Recipe Name</label>
                             <input type="text" name="recipe_name" id="recipe_name" value="{{recipe.recipe_name}}"
                                 class="form-control" placeholder="Recipe Name" aria-label="Recipe Name"
                                 aria-describedby="basic-addon1">
                         </div>
                     </div>
                     <div class="row">
+                        <label for="chef" class="form-label">Chef</label>
                         <div class="input-group mb-3">
-                            <label for="chef" class="form-label">Chef</label>
                             <input type="text" name="chef" id="chef" value="{{recipe.chef}}" class="form-control"
                                 placeholder="Chef" aria-label="Chef" aria-describedby="basic-addon2">
                         </div>
@@ -37,9 +40,9 @@
                     <div class="row">
                         <label for="image" class="form-label">Image URL</label>
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
                             <input type="text" name="image" value="{{recipe.image}}" class="form-control" id="image"
                                 aria-describedby="basic-addon3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
                         </div>
                     </div>
                     <div class="row">
@@ -89,7 +92,6 @@
                     <div class="row">
                         <label for="directions" class="form-label">Directions</label>
                         <div class="input-group">
-
                             <textarea class="form-control" name="directions" id="directions"
                                 value="{{recipe.directions}}" aria-label="Directions"></textarea>
                             <span class="input-group-text">Write each step in new line.</span>
@@ -98,13 +100,13 @@
                     <div class="row">
                         <label for="username" class="form-label">Username</label>
                         <div class="input-group mb-3">
-
                             <input type="text" name="username" id="username" value="{{recipe.username}}"
                                 class="form-control" placeholder="Username" aria-label="Username"
                                 aria-describedby="basic-addon1">
                             <span class="input-group-text">@</span>
                         </div>
                     </div>
+                    <!--Button And Cancel Link-->
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-brown">Update</button>

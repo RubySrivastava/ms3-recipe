@@ -292,6 +292,8 @@ body {
   position: relative;
 }
 /*End Sign up Page*/
+
+/*Contact Page*/
 .message-container {
   background: url("../image/contact.jpg") no-repeat bottom right;
   -webkit-background-size: cover;
@@ -310,7 +312,7 @@ body {
   margin-top: 6rem;
   margin-bottom: 2rem;
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   color: #131315;
 }
 .header-form {
@@ -328,6 +330,7 @@ body {
 }
 }
 /*End Contact Page*/
+
 /*My Page*/
 .profile-header {
     margin-top: 80px;
@@ -390,11 +393,11 @@ body {
 /*Flash Message*/
 .flashes h4 {
     margin-top: 70px;
+    margin-left: 40px;
     line-height: 2;
 }
 /*End Flash Message*/
 .recipe-name {
-    
     margin-bottom: 70px;
     text-align: center;
     align-items: center;

@@ -215,6 +215,25 @@ def delete_recipe(recipe_id):
     return redirect(url_for("mypage"))
 
 
+#--Add New Category To DB--#
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if not session.get("user"):
+        return render_template("404.html")
+
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name"),
+        }
+        mongo.db.categories.insert_one(category)
+        flash("Category is successfully added")
+        return redirect(url_for("mypage", username=session['user']))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "mypage.html", categories=categories)
+
+
 #--Subscribe Newsletter--#
 @app.route("/newsletter", methods=["GET", "POST"])
 def newsletter():

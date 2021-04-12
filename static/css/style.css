@@ -364,6 +364,20 @@ body {
 }
 /*End Add/Edit Page*/
 
+/*Categories*/
+.card_category {
+    background-color: #f5f5ea;
+    color: maroon;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title_category {
+    align-items: center;
+    text-align: center;
+}
+/* End Categories*/
+
 /*Buttons*/
 .btn-brown {
     background-color: brown;

@@ -2,53 +2,39 @@
 {% block content %}
 
 <div class="container-fluid message-container img-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <section class="callout message-box text-center">
-                    <form onsubmit="return sendMail(this);">
-                        <div>
-                            <h1 class="header-form">Send Feedback!</h1>
-                        </div>
-                        <div>
-                            <input type="text" name="name" class="form-control mb-3" id="fullname" placeholder="Name"
-                                required />
-                            <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
-                                placeholder="Email" required />
-                            <textarea rows="5" name="message" class="form-control mb-3" id="message"
-                                placeholder="Message" required></textarea>
-                            <button type="submit" class="btn btn-brown center-block">Submit</button>
-                        </div>
-                    </form>
-                </section>
-                <div aria-live="polite" aria-atomic="true"
-                    class="d-flex justify-content-center align-items-center w-100">
-                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"
-                        data-delay="5000">
-                        <div class="toast-header">
-                            <strong class="mr-auto">Thank You!</strong>
-                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-                        </div>
-                        <div class="toast-body">
-                            We will contact you soon.
-                        </div>
+    <div class="row">
+        <div class="col-md-6">
+            <section class="callout message-box text-center">
+                <form onsubmit="return sendMail(this);">
+                    <div>
+                        <h1 class="header-form">Send Feedback!</h1>
                     </div>
-                </div>
-            </div>
-           
-            <div class="col-md-6">
-                <section class="callout message-box text-center">
-                <h4>Want to post recipe?<a href="{{url_for ('signup') }}">Sign Up</a></h4>
-                <h4>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h4>
+                    <div>
+                        <input type="text" name="name" class="form-control mb-3" id="fullname" placeholder="Name"
+                            required />
+                        <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
+                            placeholder="Email" required />
+                        <textarea rows="5" name="message" class="form-control mb-3" id="message" placeholder="Message"
+                            required></textarea>
+                        <button type="submit" class="btn btn-brown center-block">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section class="callout message-box text-center">
+                <h5>Want to post recipe?<a href="{{url_for ('signup') }}">Sign Up</a></h5>
+                <h5>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h5>
                 <p><strong>Subscribe here for newsletter</strong></p>
                 <form method="POST" action="{{ url_for('newsletter') }}">
-                <input type="email" name="email_id" class="form-control mb-3" id="email_id"
-                                placeholder="Email" required />
-                <button type="submit" class="btn btn-brown center-block">Submit</button>
+                    <input type="email" name="email_id" class="form-control mb-3" id="email_id" placeholder="Email"
+                        required />
+                    <button type="submit" class="btn btn-brown center-block">Submit</button>
                 </form>
-                </section>
-            </div>
-        
+            </section>
         </div>
+
     </div>
+</div>
 
 {% endblock %}

@@ -413,13 +413,7 @@ body {
     font-size: 15px;  
 }
 }
-/*Flash Message*/
-.flashes h4 {
-    margin-top: 70px;
-    margin-left: 40px;
-    line-height: 2;
-}
-/*End Flash Message*/
+
 .recipe-name {
     margin-bottom: 70px;
     text-align: center;

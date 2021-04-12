@@ -276,6 +276,7 @@ def newsletter():
         newsletter = {
             "email_id": request.form.get("email_id").lower(),
         }
+        flash("Successfully subscribed")
         mongo.db.newsletter.insert_one(newsletter)
     return render_template("contact.html")
 

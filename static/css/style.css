@@ -48,7 +48,9 @@ body {
 .navbar-dark .navbar-nav .show>.nav-link {
   color: maroon;
 }
-
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
 /*Media Query For Navbar*/
 @media screen and (max-width: 500px) {
   .navbar a {

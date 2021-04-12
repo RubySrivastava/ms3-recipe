@@ -66,14 +66,14 @@
                                 Category
                             </a>
                             <!--Category Dropdown List-->
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='all') }}">All</a>
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='snacks') }}">Snacks</a>
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='main_course') }}">Main
+                            <div class="dropdown-menu dropdown-bg" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='all') }}">All</a>
+                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='snacks') }}">Snacks</a>
+                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='main_course') }}">Main
                                     Course</a>
-                                <a class="dropdown-item"
+                                <a class="dropdown-item nav-link"
                                     href="{{ url_for('recipe', categories='dessert') }}">Dessert</a>
-                                <a class="dropdown-item" href="{{ url_for('recipe', categories='drinks') }}">Drinks</a>
+                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='drinks') }}">Drinks</a>
                             </div>
                         </li>
                         <li class="nav-item">

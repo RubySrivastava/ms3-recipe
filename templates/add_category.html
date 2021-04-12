@@ -19,9 +19,12 @@
                     <!-- submit button -->
                     <div class="row">
                         <div class="col s12 center-align">
-                            <button type="submit" class="btn-crud-recipe">
-                                Add Category+</i>
+                            <button type="submit" class="btn btn-brown">
+                                Add+
                             </button>
+                            <a class="btn btn-brown" href="{{ url_for('get_categories', username=session['user']) }}">
+                                Cancel
+                            </a>
                         </div>
                     </div>
                 </form>

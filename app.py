@@ -214,6 +214,12 @@ def delete_recipe(recipe_id):
     flash("Recipe Successfully Deleted")
     return redirect(url_for("mypage"))
 
+#--Get Category from DB--#
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
+
 
 #--Add New Category To DB--#
 @app.route("/add_category", methods=["GET", "POST"])

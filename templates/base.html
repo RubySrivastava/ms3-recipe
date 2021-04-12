@@ -80,19 +80,20 @@
                             <a class="nav-link " href="{{url_for ('contact') }}">Contact</a>
                         </li>
                         {% if session.user %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
-                        </li>
-                        {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                        {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
+                            </li>
+                            {% if session.user|lower == "admin@gmail.com"|lower %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
+                            </li>
                         {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
+                            </li>
                         {% endif %}
                     </ul>
                 </div>

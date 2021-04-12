@@ -83,6 +83,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
                         </li>
+                        {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
                         </li>

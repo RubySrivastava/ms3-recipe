@@ -361,7 +361,7 @@ body {
 }
 /*End My Page*/
 
-/*Add/Edit Page*/
+/*Add/Edit Recipe Page*/
 .add-box {
   background-color: #f5f5ea;
   padding: 2rem 1rem;
@@ -371,7 +371,7 @@ body {
   min-width: 400px;
   color: #131315;
 }
-/*End Add/Edit Page*/
+/*End Add/Edit Recipe Page*/
 
 /*Categories*/
 .card_category {
@@ -413,11 +413,6 @@ body {
     font-size: 15px;  
 }
 }
+/*End Buttons*/
 
-.recipe-name {
-    margin-bottom: 70px;
-    text-align: center;
-    align-items: center;
-    font-size: 30px;
-    text-decoration: underline;
-}
+

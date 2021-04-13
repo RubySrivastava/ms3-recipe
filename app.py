@@ -33,7 +33,7 @@ def home():
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipe.html", recipes=recipes)
+    return render_template("recipe/recipe.html", recipes=recipes)
 
 
 #--Recipe By Category--#
@@ -52,7 +52,7 @@ def recipe(categories):
         recipes = list(mongo.db.recipes.find({"category_name": "Drinks"}))
 
     return render_template(
-        "recipe.html", recipes=recipes, categories=categories)
+        "recipe/recipe.html", recipes=recipes, categories=categories)
 
 
 #--User SignUp--#
@@ -76,7 +76,7 @@ def signup():
         flash("Registration Successful!")
         return redirect(url_for("mypage", username=session["user"]))
 
-    return render_template("signup.html")
+    return render_template("users/signup.html")
 
 
 #--Users Login--#
@@ -100,14 +100,14 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("users/login.html")
 
 
 #--Open Mypage--#
 @app.route("/mypage", methods=["GET", "POST"])
 def mypage():
     if not session.get("user"):
-        return render_template("404.html")
+        return render_template("error_handlers/404.html")
 
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -119,7 +119,7 @@ def mypage():
             user_recipes = list(
                 mongo.db.recipes.find({"username": session["user"]}))
         return render_template(
-            "mypage.html", username=username, user_recipes=user_recipes)
+            "users/mypage.html", username=username, user_recipes=user_recipes)
     return redirect(url_for("login"))
 
 
@@ -135,7 +135,7 @@ def logout():
 #--Contact Page--#
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("users/contact.html")
 
 
 #--Recipes Description--#
@@ -143,16 +143,16 @@ def contact():
 def recipes(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     if not recipe:
-        return render_template("404.html")
+        return render_template("error_handlers/404.html")
 
-    return render_template("recipes.html", recipe=recipe)
+    return render_template("recipe/recipes.html", recipe=recipe)
 
 
 #--Add New Recipe To DB--#
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if not session.get("user"):
-        return render_template("404.html")
+        return render_template("error_handlers/404.html")
 
     if request.method == "POST":
         recipe = {
@@ -174,7 +174,7 @@ def add_recipe():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "add_recipe.html", categories=categories)
+        "recipe/add_recipe.html", categories=categories)
 
 
 #--Edit Recipe From DB--#
@@ -182,7 +182,7 @@ def add_recipe():
 def edit_recipe(recipe_id):
 
     if not session.get("user"):
-        return render_template("404.html")
+        return render_template("error_handlers/404.html")
 
     if request.method == "POST":
         submit = {
@@ -204,7 +204,7 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template("recipe/edit_recipe.html", recipe=recipe, categories=categories)
 
 
 #--Delete Recipe From DB--#
@@ -219,10 +219,10 @@ def delete_recipe(recipe_id):
 @app.route("/get_categories")
 def get_categories():
     if not session.get("user") == "admin@gmail.com":
-        return render_template("403.html")
+        return render_template("error_handlers/403.html")
         
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    return render_template("category/categories.html", categories=categories)
 
 
 #--Add Category to DB--#
@@ -236,7 +236,7 @@ def add_category():
         flash("New Category Added")
         return redirect(url_for("get_categories"))
 
-    return render_template("add_category.html")
+    return render_template("category/add_category.html")
 
 
 #--Edit Category from DB--#
@@ -251,7 +251,7 @@ def edit_category(category_id):
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template("category/edit_category.html", category=category)
 
 
 #--Delete Category from DB--#
@@ -278,7 +278,7 @@ def newsletter():
         }
         flash("Successfully subscribed")
         mongo.db.newsletter.insert_one(newsletter)
-    return render_template("contact.html")
+    return render_template("users/contact.html")
 
 
 #--App Run--#

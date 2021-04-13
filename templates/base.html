@@ -67,33 +67,37 @@
                             </a>
                             <!--Category Dropdown List-->
                             <div class="dropdown-menu dropdown-bg" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='all') }}">All</a>
-                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='snacks') }}">Snacks</a>
-                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='main_course') }}">Main
+                                <a class="dropdown-item nav-link"
+                                    href="{{ url_for('recipe', categories='all') }}">All</a>
+                                <a class="dropdown-item nav-link"
+                                    href="{{ url_for('recipe', categories='snacks') }}">Snacks</a>
+                                <a class="dropdown-item nav-link"
+                                    href="{{ url_for('recipe', categories='main_course') }}">Main
                                     Course</a>
                                 <a class="dropdown-item nav-link"
                                     href="{{ url_for('recipe', categories='dessert') }}">Dessert</a>
-                                <a class="dropdown-item nav-link" href="{{ url_for('recipe', categories='drinks') }}">Drinks</a>
+                                <a class="dropdown-item nav-link"
+                                    href="{{ url_for('recipe', categories='drinks') }}">Drinks</a>
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="{{url_for ('contact') }}">Contact</a>
                         </li>
                         {% if session.user %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
-                            </li>
-                            {% if session.user|lower == "admin@gmail.com"|lower %}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                            {% endif %}
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for ('mypage') }}">My Page</a>
+                        </li>
+                        {% if session.user|lower == "admin@gmail.com"|lower %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{url_for ('logout') }}">Sign Out</a>
+                        </li>
                         {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{url_for ('login') }}">Sign In/Sign Up</a>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -105,13 +109,13 @@
     <section>
         <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="recipe-text">
-                        <h4 class="recipe-header">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="recipe-text">
+            <h4 class="recipe-header">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 

@@ -220,7 +220,7 @@ def delete_recipe(recipe_id):
 def get_categories():
     if not session.get("user") == "admin@gmail.com":
         return render_template("error_handlers/403.html")
-        
+
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("category/categories.html", categories=categories)
 

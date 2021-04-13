@@ -17,14 +17,12 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card-body card_category">
                 <h4 class="card-title title_category">{{ category.category_name }}</h4>
-                <a href="{{ url_for('edit_category', category_id=category._id) }}"
-                    class="btn-crud-recipe">Edit</a>
-                <a href="{{ url_for('delete_category', category_id=category._id) }}"
-                    class="btn-crud-recipe">Delete</a>   
+                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-crud-recipe">Edit</a>
+                <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn-crud-recipe">Delete</a>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}

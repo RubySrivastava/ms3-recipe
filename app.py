@@ -1,4 +1,4 @@
-#--Import files--#
+# Import files
 import os
 from flask import (
     Flask, flash, render_template,
@@ -12,7 +12,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-#--Configuration--#
+# Configuration
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -20,7 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#--Home Page--#
+# Home Page
 @app.route("/")
 @app.route("/home")
 def home():
@@ -28,7 +28,7 @@ def home():
     return render_template("home.html", recipes=recipes)
 
 
-#--Search Recipe--#
+# Search Recipe
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -36,7 +36,7 @@ def search():
     return render_template("recipe/recipe.html", recipes=recipes)
 
 
-#--Recipe By Category--#
+# Recipe By Category
 @app.route("/recipe/<categories>")
 def recipe(categories):
     #--Show recipes of that specific category--#
@@ -55,7 +55,7 @@ def recipe(categories):
         "recipe/recipe.html", recipes=recipes, categories=categories)
 
 
-#--User SignUp--#
+# User SignUp
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -79,7 +79,7 @@ def signup():
     return render_template("users/signup.html")
 
 
-#--Users Login--#
+# Users Login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -103,7 +103,7 @@ def login():
     return render_template("users/login.html")
 
 
-#--Open Mypage--#
+# Open Mypage
 @app.route("/mypage", methods=["GET", "POST"])
 def mypage():
     if not session.get("user"):
@@ -123,7 +123,7 @@ def mypage():
     return redirect(url_for("login"))
 
 
-#--Logout--#
+# Logout
 @app.route("/logout")
 def logout():
     #--Remove user from session cookie--#
@@ -132,13 +132,13 @@ def logout():
     return redirect(url_for("login"))
 
 
-#--Contact Page--#
+# Contact Page
 @app.route("/contact")
 def contact():
     return render_template("users/contact.html")
 
 
-#--Recipes Description--#
+# Recipes Description
 @app.route("/recipes/<recipe_id>")
 def recipes(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -148,7 +148,7 @@ def recipes(recipe_id):
     return render_template("recipe/recipes.html", recipe=recipe)
 
 
-#--Add New Recipe To DB--#
+# Add New Recipe To DB
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if not session.get("user"):
@@ -177,7 +177,7 @@ def add_recipe():
         "recipe/add_recipe.html", categories=categories)
 
 
-#--Edit Recipe From DB--#
+# Edit Recipe From DB
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
 
@@ -204,10 +204,11 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("recipe/edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "recipe/edit_recipe.html", recipe=recipe, categories=categories)
 
 
-#--Delete Recipe From DB--#
+# Delete Recipe From DB
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -215,7 +216,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("mypage"))
 
 
-#--Get Category from DB--#
+# Get Category from DB
 @app.route("/get_categories")
 def get_categories():
     if not session.get("user") == "admin@gmail.com":
@@ -225,7 +226,7 @@ def get_categories():
     return render_template("category/categories.html", categories=categories)
 
 
-#--Add Category to DB--#
+# Add Category to DB
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -239,7 +240,7 @@ def add_category():
     return render_template("category/add_category.html")
 
 
-#--Edit Category from DB--#
+# Edit Category from DB
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -254,7 +255,7 @@ def edit_category(category_id):
     return render_template("category/edit_category.html", category=category)
 
 
-#--Delete Category from DB--#
+# Delete Category from DB
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
@@ -262,7 +263,7 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-#--Subscribe Newsletter--#
+# Subscribe Newsletter
 @app.route("/newsletter", methods=["GET", "POST"])
 def newsletter():
     if request.method == "POST":
@@ -281,7 +282,7 @@ def newsletter():
     return render_template("users/contact.html")
 
 
-#--App Run--#
+# App Run
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

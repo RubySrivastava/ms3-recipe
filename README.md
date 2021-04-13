@@ -8,7 +8,10 @@
  
  ## About
 
-
+This project is made for food lovers who wants to try to cook himself and like to try different flavour.
+This website is made with the personal experience of site owner who likes to cook and share his recipe so that others can also explore the recipe. 
+For site owners it will be utility to increase their presence over the internet which lead to increase their business by adding more content by himself and others can also contribute by their recipe.
+It is designed to be responsive on all devices and easy to navigate for users and owner.
 
 
 ## Table of Contents

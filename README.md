@@ -37,6 +37,10 @@ It is designed to be responsive on all devices and easy to navigate for users an
 
 ### User Stories
 
+This website gives the information about different recipe with cooking method posted by site owner and other users. 
+Any food lover who wants to come and explore different taste then this website is perfect for him.
+In this website he gets the information about different recipe based on category and can also post his recipe.
+This site also provides to create your own account and post recipe.
 
 - ####  Admin/Site Owner
     1.

@@ -42,14 +42,33 @@ Any food lover who wants to come and explore different taste then this website i
 In this website he gets the information about different recipe based on category and can also post his recipe.
 This site also provides to create your own account and post recipe.
 
+- #### Generic Traveller
+    1. I want to easily understand the purpose and the layout of the site without additional instructions needed.
+    1. I want to intuitively navigate through the site to browse the content.
+    1. I want the site is responsive on all device as I usually use phone for doing all such type of stuff.
+    1. I want to be able to use the website on any device so I can keep it handy.
+    1. I want to use the navigation at all times and have it readily available so I can quickly navigate from one page to another.
+
 - ####  Admin/Site Owner
-    1.
+    1. As a site owner I want to read all the recipe.
+    1. As a site owner I want to add, edit and delete my recipe.
+    1. As a site owner I can delete others recipe from my site but can not edit whenever I want.
+    1. As a site owner I want manage categories of recipes.I want to add, edit and delete the category.
+    1. As a site owner I want to recieve the feedback of users.
+    
+- #### User who wants to get recipe
+    1. I want to check the recipe without login or sign up on site.
+    1. I want to get recipe by search option.
+    1. I want to contact the site owner by sending message without login or sign up.
+    1. I want to request the site owner for newsletter without login or sign up.
 
 - #### User who wants to post recipe
-    1. 
-
-- #### User who wants to get recipe
-    1. 
+    1. I want to create my profile by sign up.
+    1. I want to easliy login and check my page.
+    1. I want to add new recipe on my page and available to all users of site.
+    1. I want to edit and delete my recipe only.
+    1. I want to contact the site owner by sending simply message.
+    1. I want to request for newsletter.
     
 
 

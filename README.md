@@ -70,8 +70,6 @@ This site also provides to create your own account and post recipe.
     1. I want to contact the site owner by sending simply message.
     1. I want to request for newsletter.
     
-
-
 <a name="design"></a>     
 ## Design
 
@@ -108,7 +106,6 @@ This site also provides to create your own account and post recipe.
     
     <img src="#" />
     
-
 <a name="features"></a>
 ## Features
 
@@ -121,7 +118,6 @@ This site also provides to create your own account and post recipe.
       - The brand logo is positioned on the left and is visible on all pages.
       - Navigation is included in the header to let the user intuitively locate it.
       - Navigation links is more visible when hovered over. This lets the visitor know that it is clickable.
-      - The navigation link, matching the page that the user is visiting, stays 'active' to let the user quickly establish which page is visiting.
       - Navigation links collapse in a home menu when viewed on mobile device.
     
     - Accessibility
@@ -140,10 +136,30 @@ This site also provides to create your own account and post recipe.
       - There are social links and when hovered over, it changed the color.
 
 ### Specific to Pages
-- 
+- Home Page
+    - This page has header, footer and search box. This page has also list of all recipe with name and image.The header has navigation bar and footer has copyright and social links.The image brings the user's attention and inviting the user to explore the website.
+
+- Contact Page
+    - This page contains a form where users can give feedback and ask questions. It has another form where users can request for newsletter by simply subscribe it. 
+
+- Login Page 
+    - This page has login form. After login user will reach on his page.
+
+- Sign Up Page
+    - This page has sign up form. After sign up a profile page created where users can add recipe.
+
+- My Page 
+    - This page consist of all recipes of respective user.
+
+- Category Page
+    - Only admin can access this page. In this page admin can manage categories.
+
+- Recipe Description Page
+    - This page displays recipe description of selected recipe.
 
 ### Future Features
-  -
+  - Create a way for the user to rate the website without having to type up feedback.
+  - A page where people can review the comments.
 
 
 <a name="technologies"></a>

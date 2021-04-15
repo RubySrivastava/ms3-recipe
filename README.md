@@ -171,6 +171,7 @@ This site also provides to create your own account and post recipe.
   - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
   - [JavaScript](https://en.wikipedia.org/wiki/Javascript)
   - [Jquery](https://en.wikipedia.org/wiki/JQuery)
+  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries and Programs Used
 
@@ -181,7 +182,12 @@ This site also provides to create your own account and post recipe.
   - [GitPod](https://www.gitpod.io/) - GitPod, connected to GitHub, hosted the coding space and allowed the project to be committed to the Github repository.
   - [Github](https://github.com/) - GitHub is used to host the project files and publish the live website by using Git Pages.
   - [Adobe Xd](https://www.adobe.com/ie/products/xd.html) - Adobe Xd is used to create mockups.
+  - [Flask]()
 
+### Database
+
+  - [MongoDB]()
+  
 <a name="#testing"></a>
 ## Testing
 

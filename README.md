@@ -181,12 +181,17 @@ This site also provides to create your own account and post recipe.
   - [Git](https://git-scm.com/) - Git is used to allow for tracking of any changes in the code and for the version control.
   - [GitPod](https://www.gitpod.io/) - GitPod, connected to GitHub, hosted the coding space and allowed the project to be committed to the Github repository.
   - [Github](https://github.com/) - GitHub is used to host the project files and publish the live website by using Git Pages.
+  - [Heroku](https://www.heroku.com/) - Heroku is the cloud platform to deploying the app.
+  - [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Flask is the web framework for the app.
+  - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja is used for Python template.
+  - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - Werkzeug is used for password hashing and authentication and autohorization.
   - [Adobe Xd](https://www.adobe.com/ie/products/xd.html) - Adobe Xd is used to create mockups.
-  - [Flask]()
+  
 
 ### Database
 
-  - [MongoDB]()
+  - [MongoDB](https://www.mongodb.com/) - MongoDB is the fully managed cloud database service used for the project.
+  
   
 <a name="#testing"></a>
 ## Testing

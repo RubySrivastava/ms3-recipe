@@ -215,14 +215,15 @@ This site also provides to create your own account and post recipe.
     - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
     
 - To write up the content of page the most helpful site is
-    - 
+    - Recipe Page [Official Website](https://www.allrecipes.com/)
     
 
 ### Media :
-- Some images used were taken from [UnSplash website](https://unsplash.com/)
+- All images used were taken from [UnSplash website](https://unsplash.com/)
 
 ### Acknowledgements :
 
+- I was inspired by the people of surrounding me who are foodie, loves cooking and love to try new recipe.
 - Thanks to my fellow student and tutors on slack channel who helped me in some way.
 - Thanks to my mentor Maranatha Ilesalnmi for helping me throughout the project and giving me important suggestions and feedback of my work.
  

@@ -324,18 +324,44 @@ body {
   min-width: 300px;
   color: #131315;
 }
+.subscribe-box {
+  background-color: #f5f5ea;
+  padding: 2rem 1rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  min-width: 300px;
+  color: #131315;
+}
 .header-form {
     font-size:20px;
 }
 /*media query*/
 @media screen and (max-width: 500px) {
   .message-box {
-    padding: 1rem 1rem;
+    padding: .5rem .5rem;
     margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.subscribe-box {
+    padding: .5rem .5rem;
+    margin-top: 0rem;
     margin-bottom: 1rem;
 }
 .header-form {
     font-size:15px;
+}
+h5 {
+    font-size: 15px;
+}
+.form-control {
+    line-height: .5rem;
+    height:25px;
+}
+.btn-brown {
+    width: 70px;
+    margin:0px;
+    padding:0px;
 }
 }
 /*End Contact Page*/

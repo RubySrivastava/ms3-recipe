@@ -285,6 +285,11 @@ body {
   align-items: center;
   text-align: right;
 }
+@media screen and (max-width: 500px) {
+    .login-box {
+        min-width: 250px;
+  }
+}
 /*End Sign In page*/
 
 /*Sign Up Page*/
@@ -384,8 +389,8 @@ h5 {
 /*media query*/
 @media screen and (max-width: 500px) {
     .add-recipe {
-    margin-top: 30px;
-    margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
 }
 }
 /*End My Page*/

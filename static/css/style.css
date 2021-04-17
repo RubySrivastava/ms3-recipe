@@ -95,6 +95,7 @@ body {
 }
 .social-links li a i:hover {
   background: #000;
+  color: white;
 }
 #footer-details {
   padding: 10px;

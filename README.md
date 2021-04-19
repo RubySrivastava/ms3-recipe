@@ -42,7 +42,7 @@ Any food lover who wants to come and explore different taste then this website i
 In this website he gets the information about different recipe based on category and can also post his recipe.
 This site also provides to create your own account and post recipe.
 
-- #### Generic Traveller
+- #### Generic User
     1. I want to easily understand the purpose and the layout of the site without additional instructions needed.
     1. I want to intuitively navigate through the site to browse the content.
     1. I want the site is responsive on all device as I usually use phone for doing all such type of stuff.
@@ -289,6 +289,51 @@ Validate by direct input
       <img src="static/lighthouse/category-dt" height="120px" />
       <img src="static/lighthouse/category-mb" height="120px" />
 
+
+### Testing User Stories 
+- #### Generic User
+    - I easily understand the purpose and the layout of the site without additional instructions needed.
+    - The landing page is simple and clear with a search box and list of all recipe. 
+    - All pages of website has navigation bar and footer. 
+    - With navigation bar I can easily access diiferent page and go anywhere from present page and come back.
+    - Footer has social link. If I click on link it open the relevant page on different tab so I can easily check the social activity.
+    - I want to access external links and be able to learn more about each page.
+        - Home Page
+            - Home page provides the search box to search the specific recipe and list of all recipe of site.
+        - Contact Page
+            - Contact page provides me contact form for feedback or query and subscriber form for newsletter.
+        - Login Page
+            -  In this page I login to the website and open my page.
+        - Signup Page
+            - In this page I create my account by filling the form and be able to post recipe.
+        - My Page
+            - In this page I can see all my recipe. I can also add, edit and delete my recipe.
+        - Recipe Description Page    
+            - In this page I can see the description of recipe with image.
+        - Manage Category Page
+            - This page can be accessed by only admin. In this page admin can manage category.
+
+- #### Admin/Site Owner 
+    - I get all recipe list posted by me and others also.
+    - I can add new recipe on my page.
+    - I can edit and delete my recipe anytime.
+    - I can delete others recipe from my website.
+    - I can add new category.
+    - I can edit and delete existing categories.
+    - I can get feedback and queries of users by mail.
+
+- #### User who wants to get recipe 
+    - I get the list of all recipe with recipe description.
+    - I get the specific recipe by search option.
+    - I can contact to site owner by contact form and also can give feedback.
+    - I can request for newsletter by subscriber form.
+    - I can also create my account on website by login form.
+    
+- #### User who wants to post recipe
+    - I can easily post recipe on my page after login.
+    - I can edit and delete my recipe from website anytime.
+    - I can see all recipe of website but can not edit and delete others recipe.
+    - I can not manage category. Only admin can manage category.   
 
 ### 
 <a name="deployment"></a>

@@ -253,9 +253,20 @@ body {
     margin-bottom: 20px;  
    }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 414px) {
     .recipe-img {
-        margin:15px;
+        margin:25px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .recipe-img {
+        margin:5px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .recipe-img {
+        margin:-20px;
+
     }
 }
 /*End Home Page*/

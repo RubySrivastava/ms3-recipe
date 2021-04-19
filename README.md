@@ -75,15 +75,16 @@ This site also provides to create your own account and post recipe.
 
 ### Colour 
       
-- #### 
-    The main color which is used for header and footer is
+- #### This website is design for food lovers who loves to eat and needs lots of motivation to cook.
+    The main color which is used for header and footer is spring wood.
     
-    <img src="#" />
+    <img src="static/color/spring-wood.png" height="40px" />
     
-- #### The black and white color is used for text-color and background-color which show intelligence and simplicity respectively.Because of this color the content looks simple and clear.
+- #### The black, brown and white color is used for text-color and background-color for links and buttons which show intelligence and simplicity respectively.Because of this color the content looks simple and clear.
       
-    <img src="#" />
-    <img src="#" />
+    <img src="static/color/black.png" height="40px" />
+    <img src="static/color/brown.png" height="40px" />
+    <img src="static/color/white.png" height="40px" />
       
 ### Typography
 

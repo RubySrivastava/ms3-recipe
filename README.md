@@ -201,7 +201,94 @@ This site also provides to create your own account and post recipe.
 <a name="#testing"></a>
 ## Testing
 
-### 
+### Functionality Testing
+  - #### Navigation bar
+     - The navigation bar stays at the top of the page on all screen sizes.
+            - When the nav links clicks it opens the relevent page in same window with same header footer.
+  - #### Footer
+     - Footer is located at the bottom of the page regardless of the content amount.
+     - When the social links are clicked, they open the relevant social media page in a new tab.
+  
+  - All external links is tested to make sure they open up the correct pages in new tabs.
+  - All internal links is tested to make sure that all pages are correctly connected.
+    
+### CSS3 validator 
+Validate by direct input 
+    [CSS Validator](https://jigsaw.w3.org/css-validator/)
+  - Test result : No Error Found But Warning
+
+### HTML5 validator
+Vaidate by direct input 
+    [HTML5 Validator](https://validator.w3.org/#validate_by_input)
+  - 
+
+### JavaScript validator
+Validate by direct input
+    [JavaScript Validator](https://jshint.com/)
+  - Test result : No Error Found But Warning
+
+### Python Validator
+    [Pyhton Validator](http://pep8online.com/)
+  - Test result : Pass
+
+### Usability Testing
+  - This website is shared on slack channel to get the feedback.This is also shared with friends to check on different device and accessbility.
+
+### Compatibility Testing
+  - #### Browser Compatibility
+    - Tested on Chrome, Firefox, Opera, Internet Explorer, Microsoft Edge, Safari.
+  - #### OS Compatibility
+    - Tested on iOS , Android 10 and Windows 10.
+  - #### Tested for responsivness on [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools). 
+
+### Performance Testing
+  - #### Tested on Developer Tools Lighthouse.
+    - To run a report
+
+        1. Download Google Chrome for Desktop.
+        2. In Google Chrome, go to the URL you want to audit. You can audit any URL on the web.
+        3. Open Chrome DevTools.
+        4. Click the Audits tab.
+        5. To the left is the viewport of the page that will be audited. To the right is the Audits panel of Chrome DevTools, which is now powered by Lighthouse.
+        6. Click Perform an audit. DevTools shows you a list of audit categories. Leave them all enabled.
+        7. Click Run audit. After 30 to 60 seconds, Lighthouse gives you a report on the page.
+
+  - #### A Lighthouse report in Chrome DevTools
+    - Home Page Desktop and Mobile
+
+     <img src="static/lighthouse/home-dt" height="120px"/>
+     <img src="static/lighthouse/home-mb" height="120px"/>
+
+    - Contact Page Desktop and Mobile
+
+     <img src="static/lighthouse/contact-dt" height="120px"/>
+     <img src="static/lighthouse/contact-mb" height="120px"/>
+
+    - Login Page Desktop and Mobile
+
+      <img src="static/lighthouse/login-dt.png" height="120px"/>
+      <img src="static/lighthouse/login-mb" height="120px"/>
+
+    - Signup Page Desktop and Mobile
+
+      <img src="static/lighthouse/signup-dt" height="120px"/>
+      <img src="static/lighthouse/signup-mb" height="120px"/>
+
+    - My Page Desktop and Mobile
+
+      <img src="static/lighthouse/mypage-dt" height="120px"/>
+      <img src="static/lighthouse/mypage-mb" height="120px"/>
+
+    - Recipe Description Page Desktop and Mobile
+
+      <img src="static/lighthouse/recipe-dt" height="120px"/>
+      <img src="static/lighthouse/recipe-mb" height="120px"/>
+
+    - Manage Category Page Desktop and Mobile
+   
+      <img src="static/lighthouse/category-dt" height="120px" />
+      <img src="static/lighthouse/category-mb" height="120px" />
+
 
 ### 
 <a name="deployment"></a>

@@ -109,6 +109,10 @@ body {
 /*End Footer*/
 
 /*Home Page*/
+.home-container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 #home-image {
   background: url("../image/home.jpg") no-repeat bottom right;
   -webkit-background-size: cover;

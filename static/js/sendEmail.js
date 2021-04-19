@@ -7,7 +7,6 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            $('.toast').toast('show');
             contactForm.reset(); // To clear the page
         },
         function(error) {

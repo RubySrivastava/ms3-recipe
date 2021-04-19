@@ -43,7 +43,7 @@ body {
   background-color: #000;
 }
 .dropdown-bg {
-    background-color: #f5f5ea;
+    background-color:#fafafa;
 }
 .navbar-dark .navbar-nav .show>.nav-link {
   color: brown;
@@ -267,7 +267,6 @@ body {
 @media screen and (max-width: 320px) {
     .recipe-img {
         margin:-20px;
-
     }
 }
 /*End Home Page*/
@@ -294,6 +293,7 @@ body {
   background-color: dimgray;
   display: flex;
   height: 100vh;
+  object-fit: cover;
   justify-content: center;
   position: relative;
 }
@@ -329,7 +329,8 @@ body {
   background-color: dimgray;
   display: flex;
   height: 100vh;
-  justify-content: right;
+  object-fit: cover;
+  justify-content: center;
   position: relative;
 }
 /*End Sign up Page*/
@@ -344,6 +345,7 @@ body {
   background-color: dimgray;
   display: flex;
   height: 100vh;
+  object-fit: cover;
   justify-content: center;
   position: relative;
 }

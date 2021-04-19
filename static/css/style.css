@@ -61,11 +61,6 @@ body {
     font-size: 20px;
   }
 }
-@media (min-width: 576px){ 
-.navbar-expand-sm .navbar-nav .nav-link {
-    font-size: 12px;
-    }
-}
 /*End Header*/
 
 /*Footer*/

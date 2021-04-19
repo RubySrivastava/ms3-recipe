@@ -46,7 +46,7 @@ body {
     background-color: #f5f5ea;
 }
 .navbar-dark .navbar-nav .show>.nav-link {
-  color: maroon;
+  color: brown;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
     color: white;
@@ -175,8 +175,8 @@ body {
 /*Media Query For Search Box*/
 @media screen and (max-width: 768px) {
   .search-box {
-    padding: 10px;
-    font-size: 15px;
+    padding: 2px;
+    font-size: 10px;
     width: 80%; 
    }
    .search-box input {
@@ -236,13 +236,18 @@ body {
     margin-top: 20px;    
     }
     .recipe-img {
-    margin:10px;
+    margin:15px;
     }
    .recipe-title {
     font-size: 15px;
     margin-top: 20px;
     margin-bottom: 20px;  
    }
+}
+@media screen and (max-width: 500px) {
+    .recipe-img {
+        margin:15px;
+    }
 }
 /*End Home Page*/
 
@@ -411,7 +416,7 @@ h5 {
 /*Categories*/
 .card_category {
     background-color: #f5f5ea;
-    color: maroon;
+    color: brown;
     align-items: center;
     text-align: center;
     margin-bottom: 20px;

@@ -278,12 +278,12 @@ Validate by direct input
     - My Page Desktop and Mobile
 
       <img src="static/lighthouse/mypage-dt.png" height="120px"/>
-      <img src="static/lighthouse/mypage-mb" height="120px"/>
+      <img src="static/lighthouse/mypage-mb.png" height="120px"/>
 
     - Recipe Description Page Desktop and Mobile
 
       <img src="static/lighthouse/recipe-dt.png" height="120px"/>
-      <img src="static/lighthouse/recipe-mb" height="120px"/>
+      <img src="static/lighthouse/recipe-mb.png" height="120px"/>
 
     - Manage Category Page Desktop and Mobile
    
@@ -381,7 +381,7 @@ Validate by direct input
 - ### Forking
   If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
   1. Go to the GitHub website and log in.
-  2. Locate the [Repository](https://github.com/RubySrivastava/exploregothenburg/) used for this project.
+  2. Locate the [Repository](https://github.com/RubySrivastava/ms3-recipe) used for this project.
   3. On the right-hand side of the Repository name, you'll see the 'Fork' button. It's located next to the 'Star' and 'Watch' buttons.
   4. This will create a copy in your personal repository.
   5. Once you're finished making changes you can locate the 'New Pull Request' button just above the file listing in the original repository.
@@ -389,7 +389,7 @@ Validate by direct input
 - ### Cloning 
   If you wish to clone or download this repository to your local device you can follow the procedure outlined below.
   1. Go to the GitHub website and log in.
-  2. Locate the [Repository](https://github.com/RubySrivastava/exploregothenburg/) used for this project.
+  2. Locate the [Repository](https://github.com/RubySrivastava/ms3-recipe) used for this project.
   3. Under the Repository name locate 'Clone or Download' button in green.
   4. To clone the repository using HTTPS click the link under "Clone with HTTPS".
   5. Open your Terminal and go to a directory where you want the cloned directory to be copied in.

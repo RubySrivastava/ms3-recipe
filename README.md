@@ -215,7 +215,7 @@ This site also provides to create your own account and post recipe.
 ### CSS3 validator 
 Validate by direct input 
     [CSS Validator](https://jigsaw.w3.org/css-validator/)
-  - Test result : No Error Found But Warning
+  - Test result : No Error 
 
 ### HTML5 validator
 Vaidate by direct input 

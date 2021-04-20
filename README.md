@@ -1,6 +1,6 @@
 
 <h1 align="center">Ruby's Kitchen</h1>
-<h1 align="center"><img src="#" /></h1>
+<h1 align="center"><img src="static/mockup/home.png" /></h1>
 
 -[Live Website](http://ms3-recipe.herokuapp.com/home)
 
@@ -78,13 +78,13 @@ This site also provides to create your own account and post recipe.
 - #### This website is design for food lovers who loves to eat and needs lots of motivation to cook.
     The main color which is used for header and footer is spring wood.
     
-    <img src="static/color/spring-wood.png" height="40px" />
+    <img src="static/color/spring-wood.png" />
     
 - #### The black, brown and white color is used for text-color and background-color for links and buttons which show intelligence and simplicity respectively.Because of this color the content looks simple and clear.
       
-    <img src="static/color/black.png" height="40px" />
-    <img src="static/color/brown.png" height="40px" />
-    <img src="static/color/white.png" height="40px" />
+    <img src="static/color/black.png" />
+    <img src="static/color/brown.png" />
+    <img src="static/color/white.png" />
       
 ### Typography
 
@@ -335,11 +335,71 @@ Validate by direct input
     - I can see all recipe of website but can not edit and delete others recipe.
     - I can not manage category. Only admin can manage category.   
 
-### 
 <a name="deployment"></a>
 ## Deployment
 
-- ### 
+- ### Working with the local copy
+  1. Install all the requirements: Go to the workspace of your local copy. In the terminal window of your IDE type: pip3 install -r requirements.txt.
+  2. Create a database in MongoDB
+     - Signup or login to your MongoDB account.
+     - Create a cluster and a database.
+     - Create four collections in the db: categories, recipes, subscribers, users.
+     - Add string values for the collections. See my Information architecture how the database is set up for this project.
+  3. Create the environment variables
+     - Create a .gitignore file in the root directory of the project.
+     - Add the env.py file in the .gitignore.
+     - Create the file env.py. This will contain all the envornment variables.
+        - Import os
+        - os.environ.setdefault("IP", "Added by developer")
+        - os.environ.setdefault("PORT", "Added by developer")
+        - os.environ.setdefault("SECRET_KEY", "Added by developer")
+        - os.environ.setdefault("MONGO_URI", "Added by developer")
+        - os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+  4. Run the app: Open your terminal window in your IDE. Type python3 app.py and run the app.
+  
+- ### Heroku Deployment
+  1. Set up local workspace for Heroku
+     - In terminal window of your IDE type: pip3 freeze -- local > requirements.txt. (The file is needed for Heroku to know which filed to install.)
+     - In termial window of your IDE type: python app.py > Procfile (The file is needed for Heroku to know which file is needed as entry point.)
+  2. Set up Heroku: create a Heroku account and create a new app and select your region.
+  3. Deployment method 'Github'
+     - Click on the Connect to GitHub section in the deploy tab in Heroku.
+       - Search your repository to connect with it.
+       - When your repository appears click on connect to connect your repository with the Heroku.
+     - Go to the settings app in Heroku and go to Config Vars. Click on Reveal Config Vars.
+       - Enter the variables contained in your env.py file. it is about: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+  4. Push the requirements.txt and Procfile to repository.
+     - $ git add requirements.txt
+     - $ git commit -m "Add requirements.txt"
+     - $ git add Procfile 
+     - $ git commit -m "Add Procfile"
+  5. Automatic deployment: Go to the deploy tab in Heroku and scroll down to Aotmatic deployments. Click on Enable Automatic Deploys. By Manual deploy click on Deploy Branch.
+
+  Heroku will receive the code from Github and host the app using the required packages. Click on Open app in the right corner of your Heroku account. The app wil open and the live link is available from the address bar. 
+
+- ### Forking
+  If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
+  1. Go to the GitHub website and log in.
+  2. Locate the [Repository](https://github.com/RubySrivastava/exploregothenburg/) used for this project.
+  3. On the right-hand side of the Repository name, you'll see the 'Fork' button. It's located next to the 'Star' and 'Watch' buttons.
+  4. This will create a copy in your personal repository.
+  5. Once you're finished making changes you can locate the 'New Pull Request' button just above the file listing in the original repository.
+
+- ### Cloning 
+  If you wish to clone or download this repository to your local device you can follow the procedure outlined below.
+  1. Go to the GitHub website and log in.
+  2. Locate the [Repository](https://github.com/RubySrivastava/exploregothenburg/) used for this project.
+  3. Under the Repository name locate 'Clone or Download' button in green.
+  4. To clone the repository using HTTPS click the link under "Clone with HTTPS".
+  5. Open your Terminal and go to a directory where you want the cloned directory to be copied in.
+  6. Type `Git Clone` and paste the URL you copied from the GitHub.
+  7. To create your local clone press `Enter`
+
+<a name="bugs"></a>
+## Known Bugs
+
+There are no identified bugs as at now.
+
 <a name="credits"></a>
 ## Credits
 

@@ -220,7 +220,7 @@ Validate by direct input
 ### HTML5 validator
 Vaidate by direct input 
     [HTML5 Validator](https://validator.w3.org/#validate_by_input)
-  - Test result : 
+  - Test result : On all pages there are some error as I used jinja template to create the pages.
 
 ### JavaScript validator
 Validate by direct input

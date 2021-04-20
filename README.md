@@ -80,7 +80,7 @@ This site also provides to create your own account and post recipe.
     
     <img src="static/color/spring-wood.png" height="40px" />
     
-- #### The black, brown and white color is used for text-color and background-color for links and buttons which show intelligence and simplicity respectively.Because of this color the content looks simple and clear.
+    The black, brown and white color is used for text-color and background-color for links and buttons which show intelligence and simplicity respectively.Because of this color the content looks simple and clear.
       
     <img src="static/color/black.png" height="40px" />
     <img src="static/color/brown.png" height="40px" />

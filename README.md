@@ -220,7 +220,7 @@ Validate by direct input
 ### HTML5 validator
 Vaidate by direct input 
     [HTML5 Validator](https://validator.w3.org/#validate_by_input)
-  - 
+  - Test result : 
 
 ### JavaScript validator
 Validate by direct input
@@ -228,6 +228,7 @@ Validate by direct input
   - Test result : No Error Found But Warning
 
 ### Python Validator
+Validate by direct input
     [Pyhton Validator](http://pep8online.com/)
   - Test result : Pass
 
@@ -256,38 +257,38 @@ Validate by direct input
   - #### A Lighthouse report in Chrome DevTools
     - Home Page Desktop and Mobile
 
-     <img src="static/lighthouse/home-dt" height="120px"/>
-     <img src="static/lighthouse/home-mb" height="120px"/>
+     <img src="static/lighthouse/home-dt.png" height="120px"/>
+     <img src="static/lighthouse/home-mb.png" height="120px"/>
 
     - Contact Page Desktop and Mobile
 
-     <img src="static/lighthouse/contact-dt" height="120px"/>
-     <img src="static/lighthouse/contact-mb" height="120px"/>
+     <img src="static/lighthouse/contact-dt.png" height="120px"/>
+     <img src="static/lighthouse/contact-mb.png" height="120px"/>
 
     - Login Page Desktop and Mobile
 
       <img src="static/lighthouse/login-dt.png" height="120px"/>
-      <img src="static/lighthouse/login-mb" height="120px"/>
+      <img src="static/lighthouse/login-mb.png" height="120px"/>
 
     - Signup Page Desktop and Mobile
 
-      <img src="static/lighthouse/signup-dt" height="120px"/>
-      <img src="static/lighthouse/signup-mb" height="120px"/>
+      <img src="static/lighthouse/signup-dt.png" height="120px"/>
+      <img src="static/lighthouse/signup-mb.png" height="120px"/>
 
     - My Page Desktop and Mobile
 
-      <img src="static/lighthouse/mypage-dt" height="120px"/>
+      <img src="static/lighthouse/mypage-dt.png" height="120px"/>
       <img src="static/lighthouse/mypage-mb" height="120px"/>
 
     - Recipe Description Page Desktop and Mobile
 
-      <img src="static/lighthouse/recipe-dt" height="120px"/>
+      <img src="static/lighthouse/recipe-dt.png" height="120px"/>
       <img src="static/lighthouse/recipe-mb" height="120px"/>
 
     - Manage Category Page Desktop and Mobile
    
-      <img src="static/lighthouse/category-dt" height="120px" />
-      <img src="static/lighthouse/category-mb" height="120px" />
+      <img src="static/lighthouse/category-dt.png" height="120px" />
+      <img src="static/lighthouse/category-mb.png" height="120px" />
 
 
 ### Testing User Stories 
@@ -406,7 +407,7 @@ There are no identified bugs as at now.
 ### Code :
 
 - Bootstrap library was used to create a responsive design. 
-- 
+ 
 ### Content :
 
 - All code was written by the Ruby Srivastava.
@@ -417,7 +418,7 @@ There are no identified bugs as at now.
     - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
     
 - To write up the content of page the most helpful site is
-    - Recipe Page [Official Website](https://www.allrecipes.com/)
+    - All Recipe Page [Official Website](https://www.allrecipes.com/)
     
 
 ### Media :

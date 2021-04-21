@@ -215,6 +215,7 @@ body {
     display: flex;
     width: 300px;
     height: 300px;
+    margin: -5px;
     object-fit: cover;
     align-items: center;
   }
@@ -249,19 +250,26 @@ body {
     margin-left: 15px;    
     }
 }
-@media screen and (max-width: 414px) {
+/*@media screen and (max-width: 414px) {
     .recipe-img {
         margin:25px;
     }
-}
+}*/
 @media screen and (max-width: 400px) {
     .recipe-img {
-        margin:5px;
+        margin:-5px;
     }
 }
 @media screen and (max-width: 320px) {
     .recipe-img {
-        margin:-20px;
+        margin:-18px;
+        height: 270px;
+        width: 270px;
+    }
+}
+@media screen and (width: 360px) {
+    .recipe-img {
+        margin:-15px;
     }
 }
 /*End Home Page*/

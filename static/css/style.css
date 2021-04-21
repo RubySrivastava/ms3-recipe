@@ -250,11 +250,6 @@ body {
     margin-left: 15px;    
     }
 }
-/*@media screen and (max-width: 414px) {
-    .recipe-img {
-        margin:25px;
-    }
-}*/
 @media screen and (max-width: 400px) {
     .recipe-img {
         margin:-5px;

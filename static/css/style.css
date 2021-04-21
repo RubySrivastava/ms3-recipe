@@ -114,6 +114,8 @@ body {
   object-fit: cover;
   display: flex;
   height: 400px;
+  margin-left:-15px;
+  margin-right:-15px;
   justify-content: center;
   position: relative;
   

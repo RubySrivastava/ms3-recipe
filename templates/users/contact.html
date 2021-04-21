@@ -10,11 +10,11 @@
                         <h1 class="header-form">Send Feedback!</h1>
                     </div>
                     <div>
-                        <input type="text" name="name" class="form-control mb-3" id="fullname" placeholder="Name"
+                        <input type="text" name="name" class="form-control contact-form mb-3" id="fullname" placeholder="Name"
                             required />
-                        <input type="email" name="emailaddress" class="form-control mb-3" id="emailaddress"
+                        <input type="email" name="emailaddress" class="form-control mb-3 contact-form" id="emailaddress"
                             placeholder="Email" required />
-                        <textarea rows="5" name="message" class="form-control mb-3" id="message" placeholder="Message"
+                        <textarea rows="5" name="message" class="form-control mb-3 contact-form" id="message" placeholder="Message"
                             required></textarea>
                         <button type="submit" class="btn btn-brown center-block">Submit</button>
                     </div>
@@ -27,7 +27,7 @@
                 <h5>Already have an account?<a href="{{url_for ('login') }}">Sign In</a></h5>
                 <p><strong>Subscribe here for newsletter</strong></p>
                 <form method="POST" action="{{ url_for('newsletter') }}">
-                    <input type="email" name="email_id" class="form-control mb-3" id="email_id" placeholder="Email"
+                    <input type="email" name="email_id" class="form-control mb-3 contact-form" id="email_id" placeholder="Email"
                         required />
                     <button type="submit" class="btn btn-brown center-block">Submit</button>
                 </form>

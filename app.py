@@ -39,7 +39,7 @@ def search():
 # Recipe By Category
 @app.route("/recipe/<categories>")
 def recipe(categories):
-    #--Show recipes of that specific category--#
+    """Show recipes of that specific category"""
     if categories == "all":
         recipes = list(mongo.db.recipes.find())
     elif categories == "snacks":
@@ -126,7 +126,7 @@ def mypage():
 # Logout
 @app.route("/logout")
 def logout():
-    #--Remove user from session cookie--#
+    """Remove user from session cookie"""
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))

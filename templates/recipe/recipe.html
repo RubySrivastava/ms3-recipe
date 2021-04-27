@@ -12,11 +12,11 @@
         <div class="row">
             {% for recipe in recipes %}
             <div class="col-12 col-md-6 col-lg-4 recipe-read">
+                <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
                 <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">
-                    <img class="recipe-img" src="{{ recipe.image}}" alt="recipe">
-                    <p class="recipe-title">{{ recipe.recipe_name }}<br>
-                        <span class="recipe-title">Chef: {{ recipe.chef }}</span></p>
+                    <div class="recipe-title">{{ recipe.recipe_name }}</div>
                 </a>
+                <div class="recipe-chef">By chef: {{ recipe.chef }}</div>
             </div>
             {% endfor %}
         </div>

@@ -259,7 +259,7 @@ body {
 
 /* Sign In Page*/
 .container-login {
-  background: url("../image/login.jpg") no-repeat bottom right;
+  background: url("../image/login.jpg") no-repeat bottom left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

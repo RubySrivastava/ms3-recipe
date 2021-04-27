@@ -221,13 +221,22 @@ body {
     align-items: center;
   }
 .recipe-title {
-    color: #000;
+    color: brown;
     font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-weight:500;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
     align-items: center;
-    text-decoration: underline;
+    text-decoration: none;
+}
+.recipe-chef {
+    color: #000;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
 }
 /*Media Query For Display All Recipe*/
 @media screen and (max-width: 768px) {
@@ -238,10 +247,11 @@ body {
     margin-top: 20px;    
     }
    .recipe-title {
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;  
+    font-size: 15px; 
    }
+   .recipe-chef {
+    font-size: 12px;
+}
 }
 /*End Home Page*/
 

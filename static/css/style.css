@@ -237,6 +237,7 @@ body {
     text-align: center;
     align-items: center;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 /*Media Query For Display All Recipe*/
 @media screen and (max-width: 768px) {

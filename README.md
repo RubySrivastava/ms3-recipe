@@ -93,7 +93,7 @@ This site also provides to create your own account and post recipe.
 ### Typography
 
 - #### The main font used is a cinzel with serif as a fallback font.
-- #### The second font used is a Expo for brand name ,footer details and titles.
+- #### The second font used is a Expo for brand name , navbar, footer details and titles.
 
 ### Imagery
 
@@ -106,6 +106,8 @@ This site also provides to create your own account and post recipe.
     -[Desktop Wireframes](https://xd.adobe.com/view/08b0941d-7b49-4297-86cf-c7491db53f06-5de3/)
     
     -[Mobile Wireframes](https://xd.adobe.com/view/0b20583c-8e0f-49ae-aca9-181e6f446a74-5e73/)
+
+    -[Ipad/Tablet Wireframes]()
 
 - #### Mockup made through original website 
     -[Wireframes](https://techsini.com/multi-mockup/index.php)
@@ -186,8 +188,8 @@ This site also provides to create your own account and post recipe.
 ### Frameworks, Libraries and Programs Used
 
   - [Bootstrap v4.5.0](https://getbootstrap.com/) - Used for the responsive layout as well as custom components such as header, footer, images, icons, grids, cards, and collapse element.
-  - [Font Awesome](https://fontawesome.com/) - Font Awesome is used to add social icons for socila links and icons for about us page.
-  - [Google Fonts](https://fonts.google.com/) - Google Fonts is used to import 'Expo'
+  - [Font Awesome](https://fontawesome.com/) - Font Awesome is used to add social icons for socila links.
+  - [Google Fonts](https://fonts.google.com/) - Google Fonts is used to import 'Expo' and 'Cinzel'.
   - [Git](https://git-scm.com/) - Git is used to allow for tracking of any changes in the code and for the version control.
   - [GitPod](https://www.gitpod.io/) - GitPod, connected to GitHub, hosted the coding space and allowed the project to be committed to the Github repository.
   - [Github](https://github.com/) - GitHub is used to host the project files and publish the live website by using Git Pages.
@@ -242,7 +244,7 @@ Validate by direct input
 
 ### Compatibility Testing
   - #### Browser Compatibility
-    - Tested on Chrome, Firefox, Opera, Internet Explorer, Microsoft Edge, Safari.
+    - Tested on Chrome, Firefox, Opera, Microsoft Edge, Safari.
   - #### OS Compatibility
     - Tested on iOS , Android 10 and Windows 10.
   - #### Tested for responsivness on [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools). 
@@ -349,8 +351,8 @@ Validate by direct input
   2. Create a database in MongoDB
      - Signup or login to your MongoDB account.
      - Create a cluster and a database.
-     - Create four collections in the db: categories, recipes, subscribers, users.
-     - Add string values for the collections. See my Information architecture how the database is set up for this project.
+     - Create five collections in the db: categories, recipes, feedback, newsletter, users.
+     - Add string values for the collections. See my database section how the database is set up for this project.
   3. Create the environment variables
      - Create a .gitignore file in the root directory of the project.
      - Add the env.py file in the .gitignore.

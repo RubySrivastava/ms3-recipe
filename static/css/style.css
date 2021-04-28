@@ -67,6 +67,7 @@ body {
 .footer {
   background-color:#f5f5ea; 
   color: brown;
+  font-family: 'Expo';
   min-height: 80px;
   width: 100%;
   bottom: 0px;
@@ -289,7 +290,6 @@ body {
   margin-bottom: 2rem;
   width: 100%;
   min-width: 300px;
-  font-family: "expo";
   color: #131315;
 }
 .forgot-pass {

@@ -203,8 +203,10 @@ This site also provides to create your own account and post recipe.
 ### Database
 
   - [MongoDB](https://www.mongodb.com/) - MongoDB is the fully managed cloud database service used for the project.
+  - The project has five collections in the database. The database structure in MongoDB is as follows:
   
-  
+  <img src="static/database/ms3-recipe-db.png" />
+
 <a name="#testing"></a>
 ## Testing
 

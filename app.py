@@ -50,6 +50,8 @@ def recipe(categories):
         recipes = list(mongo.db.recipes.find({"category_name": "Dessert"}))
     elif categories == "drinks":
         recipes = list(mongo.db.recipes.find({"category_name": "Drinks"}))
+    else:
+        recipes = list(mongo.db.recipes.find())
 
     return render_template(
         "recipe/recipe.html", recipes=recipes, categories=categories)

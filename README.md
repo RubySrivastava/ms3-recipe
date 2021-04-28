@@ -85,6 +85,10 @@ This site also provides to create your own account and post recipe.
     <img src="static/color/black.png" height="40px" />
     <img src="static/color/brown.png" height="40px" />
     <img src="static/color/white.png" height="40px" />
+
+    The wafer color is used for backgound of contact, subscriber, login and signup forms.
+
+    <img src="static/color/wafer.png" height="40px" />
       
 ### Typography
 

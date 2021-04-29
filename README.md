@@ -107,7 +107,7 @@ This site also provides to create your own account and post recipe.
     
     -[Mobile Wireframes](https://xd.adobe.com/view/0b20583c-8e0f-49ae-aca9-181e6f446a74-5e73/)
 
-    -[Ipad/Tablet Wireframes]()
+    -[Ipad/Tablet Wireframes](https://xd.adobe.com/view/f38ecd2d-7857-4416-afaa-ba3523c54746-a6dd/)
 
 - #### Mockup made through original website 
     -[Wireframes](https://techsini.com/multi-mockup/index.php)

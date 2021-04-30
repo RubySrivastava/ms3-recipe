@@ -24,7 +24,7 @@
         <div class="row">
             {% for recipe in user_recipes %}
             <div class="col-12 col-md-6 col-lg-4 recipe-read">
-                <img class="recipe-img" src="{{ recipe.image }}" alt="recipe">
+                <img class="recipe-img" src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
                 <div class="recipe-title">
                     <a href="{{ url_for('recipes', recipe_id=recipe._id) }}">{{ recipe.recipe_name }}</a>
                 </div>

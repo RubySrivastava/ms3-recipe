@@ -136,8 +136,13 @@ This site also provides to create your own account and post recipe.
       - All Pages have a description in case the image link breaks as well as helps screen readers.
       - The home menu has aria-label added to let users with screen readers know where the toggleable menu is.
     
-    - Buttons
-      - All buttons are styled in the way to provide consistency across the page. 
+    - Buttons/Links
+      - All buttons are styled in the way to provide consistency across the page.
+      - All links have a hover effect.
+      - All external links open in a new tab to allow the user to easily navigate back to the page. 
+    
+    - Flash messages
+      - Messages displayed at the top of the page to provide the user confirmation of actions like sign out, adding or editing recipe etc.
 
     - Responsiveness
       - All Pages are responsive on different viewport size.

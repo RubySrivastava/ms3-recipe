@@ -95,10 +95,25 @@ This site also provides to create your own account and post recipe.
 - #### The main font used is a cinzel with serif as a fallback font.
 - #### The second font used is a Expo for brand name , navbar, footer details and titles.
 
+### Icons
+
+- #### In this project, icons provided by Font Awesome. The Icons that are used have functional purposes such as the hamburger menu and social media icons.
+
 ### Imagery
 
 - #### 
     -[Image Optimizer](http://jpeg-optimizer.com/)
+
+### Defensive Design
+
+- #### The user is not able to break the site by clicking on buttons.
+- #### The add and edit recipe form:
+    - The category has to be chosen.
+    - The image URL must start with https://.
+    - The servings, preparation time, cook time and total time has to be numbered.
+- #### A recipe or category can't be deleted by just one click. 
+    If someone clicks on the delete button, there wil be a modal with a confirmation
+        if someone is sure to delete the recipe or category.
 
 ### Mockups
 

@@ -428,7 +428,9 @@ Validate by direct input
 <a name="bugs"></a>
 ## Known Bugs
 
-There are no identified bugs as at now.
+- ### Error page was coming for unknown category.
+   - Fallback option was missing in case of missing categories in database.
+   - Add an else statement in categories method to prevent page break.
 
 <a name="credits"></a>
 ## Credits

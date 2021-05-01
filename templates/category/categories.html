@@ -18,8 +18,8 @@
             <div class="card-body card_category">
                 <h4 class="card-title title_category">{{ category.category_name }}</h4>
                 <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-crud-recipe">Edit</a>
-                <a href="#delete-modal-{{category._id}}" data-target="#delete-modal-{{category._id}}" data-toggle="modal" class="btn-crud-recipe">Delete</a>
-                <div id="delete-modal-{{category._id}}" class="modal">
+                <a href="#cdelete-modal-{{category._id}}" data-target="#cdelete-modal-{{category._id}}" data-toggle="modal" class="btn-crud-recipe">Delete</a>
+                <div id="cdelete-modal-{{category._id}}" class="modal">
                     <div class="modal-dialog modal-box">
                         <div class="modal-content">
                             <!--Modal Text-->
